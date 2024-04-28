@@ -1,6 +1,11 @@
+// https://mattstenback.com/journal/my-34-key-keyboard-layout/
 // Forked/inspired by: https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum
 
 #include QMK_KEYBOARD_H
+
+
+
+
 
 // #include "keyboards/gboards/g/keymap_combo.h"
 #include "g/keymap_combo.h"
