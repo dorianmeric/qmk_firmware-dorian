@@ -35,8 +35,13 @@
 #define MOUSEKEY_TIME_TO_MAX    64
 
 // Thumb Combos
-#if defined (MIRYOKU_KLUDGE_THUMBCOMBOS)
-  // #define COMBO_COUNT 8
-  #define COMBO_TERM 300 // 200 originally
-  #define EXTRA_SHORT_COMBOS
-#endif
+// #if defined (MIRYOKU_KLUDGE_THUMBCOMBOS)
+//   // #define COMBO_COUNT 8
+//   #define COMBO_TERM 300 // 200 originally
+// #endif
+
+#define COMBO_ONLY_FROM_LAYER 0
+#define COMBO_TERM 50        // how quickly all combo keys must be pressed in succession to trigger
+// #define COMBO_MUST_HOLD_MODS // if a combo triggers a modifier, only trigger when the combo is held
+// #define COMBO_HOLD_TERM 200  // how long at least one of the combo keys must be held to trigger
+#define EXTRA_SHORT_COMBOS // limits combos to 6 keys max

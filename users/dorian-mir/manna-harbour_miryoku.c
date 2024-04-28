@@ -216,3 +216,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 // Add the combos
 #include "keyboards/gboards/g/keymap_combo.h"
+
+
+// https://github.com/qmk/qmk_firmware/blob/master/docs/feature_combo.md
+// controls the COMBO timing, to have a more relax timing for the thumb keys
+uint16_t get_combo_term(uint16_t index, combo_t *combo) {
+
+    if (index - thum_base_right <= 5) {
+        return 300;
+    }
+
+    return 50; //COMBO_TERM; 
+}
