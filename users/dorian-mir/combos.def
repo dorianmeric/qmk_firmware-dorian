@@ -3,45 +3,44 @@
 // thumb combos
 #if defined (MIRYOKU_KLUDGE_THUMBCOMBOS)
 
-COMB( thumbcombos_base_right, LT(U_FUN, KC_DEL),    LT(U_SYM, KC_BSPC),     LT(U_NUM, KC_ENT)   )   
-COMB( thumbcombos_base_left,  LT(U_MEDIA, KC_ESC),  LT(U_NAV, KC_TAB),      LT(U_MOUSE, KC_SPC) ) 
-COMB( thumbcombos_nav,        KC_DEL,               KC_BSPC,                KC_ENT              )                       
-COMB( thumbcombos_mouse,      KC_BTN3,              KC_BTN2,                KC_BTN1             )              
-COMB( thumbcombos_media,      KC_MUTE,              KC_MSTP,                KC_MPLY             )              
-COMB( thumbcombos_num,        KC_DOT,               KC_0,                   KC_MINS             )              
-// COMB( thumbcombos_sym,        KC_LPRN,              KC_RPRN,                KC_UNDS             )              
-// COMB( thumbcombos_fun,        KC_APP,               KC_TAB,                 KC_SPC              )               
+COMB( thum_base_right, LT(U_FUN, KC_DEL),            LT(U_SYM, KC_BSPC),     LT(U_NUM, KC_ENT)   )   
+COMB( thum_base_left,  LT(U_MEDIA, KC_ESC),          LT(U_NAV, KC_TAB),      LT(U_MOUSE, KC_SPC) ) 
+COMB( thum_nav,        KC_DEL,                       KC_BSPC,                KC_ENT              )                       
+COMB( thum_mouse,      KC_BTN3,                      KC_BTN2,                KC_BTN1             )              
+COMB( thum_media,      KC_MUTE,                      KC_MSTP,                KC_MPLY             )              
+COMB( thum_num,        KC_DOT,                       KC_0,                   KC_MINS             )              
+// COMB( thum_sym,        KC_LPRN,                       KC_RPRN,                KC_UNDS             )              
+// COMB( thum_fun,        KC_APP,                        KC_TAB,                 KC_SPC              )               
 
 #endif
 
 
 
-
 // Right Hand
 
-COMB(combo00,     KC_BSPC,          KC_I, KC_O)       // i+o = Backspace
-COMB(combo01,     RCTL(KC_BSPC),    KC_U, KC_I)    // u++i = Backspace Word
-COMB(combo02,     RSFT(KC_HOME),    KC_Y, KC_U)     // y+u = Select line left
-COMB(combo03,     KC_ENT,           KC_K, KC_L)       // k+l = Enter
-COMB(combo04,     KC_DEL,           KC_COMM, KC_DOT)  // ,+. = Del
-COMB(combo05,     RCTL(KC_DEL),     KC_M, KC_COMM)   // m+, = delete next word
-COMB(combo06,     RSFT(KC_END),     KC_N, KC_M)      // n+m = Select line right
-COMB(combo07,     KC_SCLN,          KC_H, KC_J)       // h+j = ;
-COMB(combo08,     KC_COLN,          KC_J, KC_K)       // j+k = :
+// COMB(combo00,     KC_BSPC,                  KC_I,           KC_O            )        // i+o = Backspace
+COMB(combo01,     RCTL(KC_BSPC),            KC_U,           KC_I            )           // u++i = Backspace Word
+COMB(combo02,     RSFT(KC_HOME),            KC_Y,           KC_U            )            // y+u = Select line left
+// COMB(combo03,     KC_ENT,                   KC_K,           KC_L            )       // k+l = Enter
+COMB(combo04,     KC_DEL,                   KC_COMM,        ALGR_T(KC_DOT)  )           // ,+. = Del
+COMB(combo05,     RCTL(KC_DEL),             KC_M,           KC_COMM         )           // m+, = delete next word
+COMB(combo06,     RSFT(KC_END),             KC_N,           KC_M            )            // n+m = Select line right
+COMB(combo07,     KC_SCLN,                  KC_H,           LSFT_T(KC_J)    )           // h+j = ;
+COMB(combo08,     KC_COLN,                  LSFT_T(KC_J),   KC_K            )           // j+k = :
 
-COMB(combo98,     QK_BOOTLOADER,    KC_Q, KC_W, KC_E, KC_R, KC_T)       // whole top row = puts the mcu in bootloader mode
+COMB(combo98,     QK_BOOTLOADER,            KC_Q, KC_W, KC_E, KC_R, KC_T)       // whole top row = puts the mcu in bootloader mode
 
 
 
 // Left Hand
 
-COMB(combo10,     KC_TAB,       KC_W, KC_E)       // w+e = Tab
-COMB(combo14,     LSFT(KC_F9),  KC_E, KC_R)       // e+r = Shift+F9
-COMB(combo11,     KC_ESC,       KC_S, KC_D)       // s+d = Esc
-COMB(combo13,     LCTL(KC_S),   KC_D, KC_F)       // d+f = Ctrl+S
-COMB(combo18,     LCTL(KC_X),   KC_Z, KC_X)       // z+x = Ctrl+x
-COMB(combo16,     LCTL(KC_C),   KC_X, KC_C)       // x+c = Ctrl+c
-COMB(combo17,     LCTL(KC_V),   KC_C, KC_V)       // c+v = Ctrl+v
+// COMB(combo10,     KC_TAB,                   KC_W,           KC_E            )       // w+e = Tab
+COMB(combo14,     LSFT(KC_F9),              KC_E,           KC_R            )       // e+r = Shift+F9
+COMB(combo11,     LCTL(KC_S),               LALT_T(KC_S),   LCTL_T(KC_D)    )       // s+d =  Ctrl+S
+COMB(combo13,     KC_ESC,                   LCTL_T(KC_D),   LSFT_T(KC_F)    )       // d+f = Esc
+COMB(combo18,     LCTL(KC_X),               KC_Z,           ALGR_T(KC_X)    )       // z+x = Ctrl+x
+COMB(combo16,     LCTL(KC_C),               ALGR_T(KC_X),   KC_C            )       // x+c = Ctrl+c
+COMB(combo17,     LCTL(KC_V),               KC_C,           KC_V            )       // c+v = Ctrl+v
 
 COMB(combo99,     QK_BOOTLOADER,    KC_Y, KC_U, KC_I, KC_O, KC_P)       // whole top row = puts the mcu in bootloader mode
 

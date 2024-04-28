@@ -21,9 +21,9 @@ U_NP,              U_NP,              LT(U_MEDIA,KC_ESC),LT(U_NAV,KC_TAB), LT(U_
 // Redo = Ctrl+Y
 // Undo = Ctrl+Z
 #define MIRYOKU_ALTERNATIVES_NAV \
-xxxx,              xxxx,              xxxx,              xxxx,              CW_TOGG,                U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             \
-KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           KC_INS,                 KC_F24,            KC_LEFT,           KC_DOWN,           KC_UP,             KC_RGHT,           \
-TD(U_TD_U_NAV),    KC_ALGR,           xxxx,              xxxx,              xxxx,                   xxxx,              KC_HOME,           KC_PGDN,           KC_PGUP,           KC_END,            \
+KC_HOME,           LCTL(KC_W),        LCTL(KC_T),        KC_WWW_REFRESH,    KC_PGUP,                U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             \
+KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           KC_PGDN,                 KC_F24,            KC_LEFT,           KC_DOWN,           KC_UP,             KC_RGHT,           \
+KC_END,            KC_ALGR,           TD(U_TD_U_NAV),    KC_INS,            CW_TOGG,                xxxx,              KC_HOME,           KC_PGDN,           KC_PGUP,           KC_END,            \
 U_NP,              U_NP,              xxxx,              xxxx,              xxxx,                   KC_ENT,            KC_BSPC,           KC_DEL,            U_NP,              U_NP
 
 #define MIRYOKU_ALTERNATIVES_MOUSE \
@@ -39,7 +39,7 @@ U_NP,              U_NP,              xxxx,              xxxx,              xxxx
 xxxx,              xxxx,              xxxx,              xxxx,              xxxx,                   RGB_TOG,           RGB_MOD,           RGB_HUI,           RGB_SAI,           RGB_VAI,           \
 KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           xxxx,                   U_NU,              KC_MPRV,           KC_VOLD,           KC_VOLU,           KC_MNXT,           \
 TD(U_TD_U_MEDIA),  KC_ALGR,           xxxx,              xxxx,              xxxx,                   OU_AUTO,           U_NU,              U_NU,              U_NU,              U_NU,              \
-U_NP,              U_NP,              xxxx,              xxxx,              xxxx,                   KC_MUTE,           KC_MPLY,           KC_MSTP,           U_NP,              U_NP
+U_NP,              U_NP,              xxxx,              xxxx,              xxxx,                   KC_MUTE,        KC_MEDIA_PLAY_PAUSE,  KC_MSTP,           U_NP,              U_NP
 
 // RIGHTMOST RIGHT THUMB
 // Needs to be an "Excel" layer:

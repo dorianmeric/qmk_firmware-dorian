@@ -14,7 +14,7 @@
 
 
 enum custom_keycodes {
-    CCY_POUND, // Alt Codes start here.
+    CCY_POUND = SAFE_RANGE, // Alt Codes start here.
     CCY_EURO,                 // € 0128
     CCY_YEN,
     FR_A_GRAVE,
@@ -48,7 +48,7 @@ char *alt_codes[][2] = {
         SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_1)SS_TAP(X_KP_9)SS_TAP(X_KP_7)), // Alt+0197 → Å
     },
     {
-		    SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_2)SS_TAP(X_KP_2)SS_TAP(X_KP_8)),   // Alt+0228 → ä
+		    SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_2)SS_TAP(X_KP_6)SS_TAP(X_KP_5)),   // Alt+0165 → ¥
         SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_1)SS_TAP(X_KP_9)SS_TAP(X_KP_6)),  // Alt+0196 → Ä
     },
     {
