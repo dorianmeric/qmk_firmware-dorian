@@ -45,11 +45,11 @@ char *alt_codes[][2] = {
     },
     {
         SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_1)SS_TAP(X_KP_2)SS_TAP(X_KP_8)), // Alt+0128 → €
-        SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_1)SS_TAP(X_KP_9)SS_TAP(X_KP_7)), // Alt+0197 → Å
+        SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_1)SS_TAP(X_KP_2)SS_TAP(X_KP_8)), // Alt+0128 → €
     },
     {
-		    SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_2)SS_TAP(X_KP_6)SS_TAP(X_KP_5)),   // Alt+0165 → ¥
-        SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_1)SS_TAP(X_KP_9)SS_TAP(X_KP_6)),  // Alt+0196 → Ä
+		    SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_1)SS_TAP(X_KP_6)SS_TAP(X_KP_5)),  // Alt+0165 → ¥
+        SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_1)SS_TAP(X_KP_6)SS_TAP(X_KP_5)),  // Alt+0165 → ¥
     },
     {
         SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_2)SS_TAP(X_KP_4)SS_TAP(X_KP_6)), // Alt+0246 → ö
@@ -58,8 +58,6 @@ char *alt_codes[][2] = {
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 
 
 
@@ -215,7 +213,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 
 // Add the combos
-#include "keyboards/gboards/g/keymap_combo.h"
+#include "keymap_combo.h" // originally from keyboards/gboards/g/
+// #include "keyboards/gboards/g/keymap_combo.h"
 
 
 // https://github.com/qmk/qmk_firmware/blob/master/docs/feature_combo.md
