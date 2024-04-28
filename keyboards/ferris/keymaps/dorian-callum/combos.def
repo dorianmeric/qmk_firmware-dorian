@@ -1,0 +1,38 @@
+
+// Right Hand
+
+COMB(combo00,     KC_BSPC,          KC_I, KC_O)       // i+o = Backspace
+COMB(combo01,     RCTL(KC_BSPC),    KC_U, KC_I)    // u++i = Backspace Word
+COMB(combo02,     RSFT(KC_HOME),   KC_Y, KC_U)     // y+u = Select line left
+COMB(combo03,     KC_ENT,           KC_K, KC_L)       // k+l = Enter
+COMB(combo04,     KC_DEL,           KC_COMM, KC_DOT)  // ,+. = Del
+COMB(combo05,     RCTL(KC_DEL),         KC_M, KC_COMM)   // m+, = delete next word
+COMB(combo06,     RSFT(KC_END),         KC_N, KC_M)      // n+m = Select line right
+COMB(combo07,     KC_SCLN,          KC_H, KC_J)       // h+j = ;
+COMB(combo08,     KC_COLN,          KC_J, KC_K)       // j+k = :
+
+COMB(combo98,     QK_BOOTLOADER,          KC_Q, KC_W, KC_E, KC_R, KC_T)       // whole top row = puts the mcu in bootloader mode
+COMB(combo91,     QK_BOOTLOADER,          KC_Q, KC_W, KC_F, KC_P, KC_G)       // whole top row = puts the mcu in bootloader mode
+
+
+
+// Left Hand
+
+COMB(combo10,     KC_TAB,       KC_W, KC_E)       // w+e = Tab
+COMB(combo14,     LSFT(KC_F9),  KC_E, KC_R)       // e+r = Shift+F9
+COMB(combo11,     KC_ESC,       KC_S, KC_D)       // s+d = Esc
+COMB(combo13,     LCTL(KC_S),   KC_D, KC_F)       // d+f = Ctrl+S
+COMB(combo18,     LCTL(KC_X),   KC_Z, KC_X)       // z+x = Ctrl+x
+COMB(combo16,     LCTL(KC_C),   KC_X, KC_C)       // x+c = Ctrl+c
+COMB(combo17,     LCTL(KC_V),   KC_C, KC_V)       // c+v = Ctrl+v
+//COMB(combo12,     KC_SLSH,      KC_V, KC_B)       // v+b = /
+
+COMB(combo99,     QK_BOOTLOADER,    KC_Y, KC_U, KC_I, KC_O, KC_QUOT)       // whole top row = puts the mcu in bootloader mode
+COMB(combo92,     QK_BOOTLOADER,    KC_J, KC_L, KC_U, KC_Y, KC_GRAVE)       // whole top row = puts the mcu in bootloader mode
+
+
+
+
+//SUBS(VIM_SAVE,      ":w",     KC_M, KC_COMM)    // m+, = :w
+//SUBS(VIM_SAVE_QUIT, ":wq",    KC_M, KC_COMM, KC_DOT) // m+,+. = :wq
+//SUBS(FV_VSPLIT,  ":vsp",      KC_F, KC_V)       // f+v = :vs 
