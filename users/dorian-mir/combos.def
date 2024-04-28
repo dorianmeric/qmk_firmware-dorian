@@ -20,8 +20,8 @@ COMB( thum_num,        KC_DOT,                       KC_0,                   KC_
 
 // COMB(combo10,     KC_TAB,                   KC_W,           KC_E            )       // w+e = Tab
 COMB(combo14,     LSFT(KC_F9),              KC_E,           KC_R            )       // e+r = Shift+F9
-COMB(combo11,     LCTL(KC_S),               LALT_T(KC_S),   LCTL_T(KC_D)    )       // s+d =  Ctrl+S
-COMB(combo13,     KC_ESC,                   LCTL_T(KC_D),   LSFT_T(KC_F)    )       // d+f = Esc
+COMB(combo13,     KC_ESC,                   LALT_T(KC_S),   LCTL_T(KC_D)    )       // s+d = Esc
+COMB(combo11,     LCTL(KC_S),               LCTL_T(KC_D),   LSFT_T(KC_F)    )       // d+f =  Ctrl+S
 COMB(combo18,     LCTL(KC_X),               KC_Z,           ALGR_T(KC_X)    )       // z+x = Ctrl+x
 COMB(combo16,     LCTL(KC_C),               ALGR_T(KC_X),   KC_C            )       // x+c = Ctrl+c
 COMB(combo17,     LCTL(KC_V),               KC_C,           KC_V            )       // c+v = Ctrl+v
@@ -33,16 +33,20 @@ COMB(combo99,     QK_BOOTLOADER,            MT(MOD_RGUI,KC_Y), KC_U, KC_I, KC_O,
 
 COMB(combo00,     KC_BSPC,                  KC_I,           KC_O            )        // i+o = Backspace
 COMB(combo01,     RCTL(KC_BSPC),            KC_U,           KC_I            )           // u++i = Backspace Word
-COMB(combo02,     RSFT(KC_HOME),          MT(MOD_RGUI,KC_Y), KC_U            )            // y+u = Select line left
+COMB(combo02,     RSFT(KC_HOME),            MT(MOD_RGUI,KC_Y), KC_U            )            // y+u = Select line left
 // COMB(combo03,     KC_ENT,                   KC_K,           KC_L            )       // k+l = Enter
 COMB(combo04,     KC_DEL,                   KC_COMM,        ALGR_T(KC_DOT)  )           // ,+. = Del
 COMB(combo05,     RCTL(KC_DEL),             KC_M,           KC_COMM         )           // m+, = delete next word
 COMB(combo06,     RSFT(KC_END),             KC_N,           KC_M            )            // n+m = Select line right
 COMB(combo07,     KC_SCLN,                  KC_H,           LSFT_T(KC_J)    )           // h+j = ;
 COMB(combo08,     KC_COLN,                  LSFT_T(KC_J),   LCTL_T(KC_K)    )           // j+k = :
-COMB(combo09,     KC_MINUS,                 LCTL_T(KC_K),      LALT_T(KC_L) )     // k+l = -  , can also get _ with a Shift
+COMB(combo09,     KC_MINUS,                 LCTL_T(KC_K),   LALT_T(KC_L) )     // k+l = -  , can also get _ with a Shift
 
 COMB(combo98,     QK_BOOTLOADER,            KC_Q, KC_W, KC_E, KC_R, KC_T)       // whole top row = puts the mcu in bootloader mode
 
 // COMB(combo20,     KC_DEL,                   KC_LSFT,      KC_BSPC           )     DOESNT WORK      // Shift+Backspacke = Del
 
+
+
+COMB(combo30,     KC_DOWN,                  KC_DOWN,         KC_LCTL    ) // in order to allow Ctrl+Down to move down the line
+COMB(combo31,     KC_UP,                    KC_UP,           KC_LCTL    )          
