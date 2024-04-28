@@ -33,7 +33,7 @@ COMB(combo99,     QK_BOOTLOADER,            MT(MOD_RGUI,KC_Y), KC_U, KC_I, KC_O,
 
 COMB(combo00,     KC_BSPC,                  KC_I,           KC_O            )        // i+o = Backspace
 COMB(combo01,     RCTL(KC_BSPC),            KC_U,           KC_I            )           // u++i = Backspace Word
-COMB(combo02,     RSFT(KC_HOME),            KC_Y,           KC_U            )            // y+u = Select line left
+COMB(combo02,     RSFT(KC_HOME),          MT(MOD_RGUI,KC_Y), KC_U            )            // y+u = Select line left
 // COMB(combo03,     KC_ENT,                   KC_K,           KC_L            )       // k+l = Enter
 COMB(combo04,     KC_DEL,                   KC_COMM,        ALGR_T(KC_DOT)  )           // ,+. = Del
 COMB(combo05,     RCTL(KC_DEL),             KC_M,           KC_COMM         )           // m+, = delete next word
