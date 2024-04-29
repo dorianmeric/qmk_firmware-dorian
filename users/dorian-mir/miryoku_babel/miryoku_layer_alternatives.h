@@ -54,7 +54,7 @@ U_NP,              U_NP,              KC_DOT,            KC_0,              KC_M
 // layers for symbols. LEFTMOST RIGHT THUMB
 // remove:  equal/+,  parentheses(?)
 #define MIRYOKU_ALTERNATIVES_SYM \
-xxxx,              KC_AMPR,           KC_LCBR,           KC_LBRC,           KC_LPRN,                KC_RPRN,           KC_RBRC,           KC_RCBR,           xxxx,              xxxx,               \
+KC_GRAVE,          KC_AMPR,           KC_LCBR,           KC_LBRC,           KC_LPRN,                KC_RPRN,           KC_RBRC,           KC_RCBR,           xxxx,              xxxx,               \
 KC_COLN,           KC_DLR,            KC_PERC,           KC_CIRC,           KC_PLUS,                KC_DLR,            KC_LSFT,           KC_LCTL,           KC_LALT,           KC_LGUI,           \
 KC_TILD,           KC_EXLM,           KC_AT,             KC_HASH,           KC_PIPE,                CCY_POUND,         CCY_EURO,          CCY_YEN,           KC_ALGR,           TD(U_TD_U_SYM),              \
 U_NP,              U_NP,              xxxx,              KC_RPRN,           KC_UNDS,                xxxx,              xxxx,              xxxx,              U_NP,              U_NP

@@ -120,13 +120,19 @@ MIRYOKU_LAYER_LIST
 
 // shift functions
 
-const key_override_t capsword_key_override = ko_make_basic(MOD_MASK_SHIFT, CW_TOGG, KC_CAPS);
+const key_override_t capsword_key_override = ko_make_basic(MOD_MASK_SHIFT, CW_TOGG, KC_CAPS); //  replaces Shift+CWTOGGLE with Capslock
+const key_override_t delete_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL); // replaces Shift+Backspace with Del
+// const key_override_t ctrl_down = ko_make_basic(MOD_MASK_CTRL, KC_DOWN, KC_DOWN); // replaces Ctrl+Down with Down
+// const key_override_t ctrl_up = ko_make_basic(MOD_MASK_CTRL, KC_UP, KC_UP); // replaces Ctrl+Up with Up
 
+// This globally defines all key overrides to be used
 const key_override_t **key_overrides = (const key_override_t *[]){
     &capsword_key_override,
-    NULL
+    &delete_key_override,
+    // &ctrl_down, // actually there are sone shortcuts that need Ctrl+Down in VSCode
+    // &ctrl_up,
+    NULL // Null terminate the array of overrides!
 };
-
 
 // // thumb combos
 // // #define MIRYOKU_KLUDGE_THUMBCOMBOS
