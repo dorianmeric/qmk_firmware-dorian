@@ -7,16 +7,21 @@
 
 #pragma once
 
+
+#include "../spacebarracecar.h"
+
+
 #define xxxx  KC_NO // present but not available for use
 #define ____  KC_TRANSPARENT
 #define Y_KEY MT(MOD_RCTL | MOD_RALT | MOD_RSFT, KC_Y)
+#define CAPS_KEY MT(MOD_RCTL | MOD_RALT | MOD_RSFT, KC_NO)
 
 #define MIRYOKU_ALTERNATIVES_BASE_QWERTY \
 KC_ESC,              KC_1,              KC_2,              KC_3,              KC_4,              KC_5,              KC_6,              KC_7,              KC_8,              KC_9,              KC_0,                   KC_MINS,           KC_EQL,            KC_BSPC,   \
 KC_TAB,              KC_Q,              KC_W,              KC_E,              KC_R,              KC_T,              Y_KEY,             KC_U,              KC_I,              KC_O,              KC_P,                   KC_LBRC,           KC_RBRC,           KC_BSLS,     \
-Y_KEY,               LWIN_T(KC_A),      LALT_T(KC_S),      LCTL_T(KC_D),      LSFT_T(KC_F),      KC_G,              KC_H,              LSFT_T(KC_J),      LCTL_T(KC_K),      LALT_T(KC_L),      LWIN_T(KC_QUOT),        KC_SCLN,           KC_ENT,                         \
+CAPS_KEY,            LWIN_T(KC_A),      LALT_T(KC_S),      LCTL_T(KC_D),      LSFT_T(KC_F),      KC_G,              KC_H,              LSFT_T(KC_J),      LCTL_T(KC_K),      LALT_T(KC_L),      LWIN_T(KC_QUOT),        KC_SCLN,           KC_ENT,                         \
 KC_LSFT,             KC_Z,              ALGR_T(KC_X),      KC_C,              KC_V,              KC_B,              KC_N,              KC_M,              KC_COMM,           ALGR_T(KC_DOT),    KC_SLSH,                MT(MOD_RSFT, KC_UP),                                \
-KC_LCTL,             LT(U_MEDIA,KC_LWIN),LT(U_NAV,KC_TAB),          LT(U_MOUSE,KC_SPC),  xxxx,   LT(U_SYM,KC_BSPC),                LT(U_NUM,KC_ENT),     LT(U_FUN,KC_LEFT),  LT(U_MEDIA, KC_DOWN),                MT(MOD_RCTL, KC_RIGHT)
+KC_LCTL,             LT(U_MEDIA,KC_LWIN), LT(U_NUM,KC_TAB),          LT(U_NAV,KC_SPC),  xxxx,   LT(U_SYM,KC_BSPC),                LT(U_MOUSE,KC_ENT),     LT(U_FUN,KC_LEFT),  LT(U_MEDIA, KC_DOWN),                MT(MOD_RCTL, KC_RIGHT)
 
 
 // left spc: Nav arrows
@@ -30,26 +35,26 @@ KC_LCTL,             LT(U_MEDIA,KC_LWIN),LT(U_NAV,KC_TAB),          LT(U_MOUSE,K
 // Redo = Ctrl+Y
 // Undo = Ctrl+Z
 #define MIRYOKU_ALTERNATIVES_NAV \
-____,            ____,              ____,              ____,              ____,              ____,                   ____,              ____,              ____,              ____,              ____,                  ____,              ____,              ____, \
-____,            KC_HOME,           LCTL(KC_W),        LCTL(KC_T),        KC_WWW_REFRESH,    KC_PGUP,                U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,                 ____,              ____,              ____,             \
+____,            ____,              ____,              ____,              ____,              ____,                   ____,              ____,              ____,              ____,              ____,                  ____,              ____,              KC_DEL, \
+A(KC_TAB),       KC_HOME,           LCTL(KC_W),        LCTL(KC_T),        KC_WWW_REFRESH,    KC_PGUP,                RSFT(KC_HOME),     RCTL(KC_BSPC),     KC_BSPC,             U_PST,             U_RDO,                 ____,              ____,              ____,             \
 ____,            KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           KC_PGDN,                xxxx,              KC_LEFT,           KC_DOWN,           KC_UP,             KC_RGHT,               ____,              ____,         \
-____,            KC_END,            KC_ALGR,           TD(U_TD_U_NAV),    KC_INS,            CW_TOGG,                xxxx,              KC_HOME,           KC_PGDN,           KC_PGUP,           KC_END,                ____,       \
-____,            ____,              ____,                           ____,      ____,     ____,                                   ____,              ____,               ____,            ____         
+A(KC_LSFT),      KC_END,            KC_ALGR,           TD(U_TD_U_NAV),    KC_INS,            CW_TOGG,                RSFT(KC_END),      RCTL(KC_DEL),      KC_DEL,           KC_PGUP,           KC_END,                ____,       \
+A(KC_LCTL),       ____,              ____,                           ____,      ____,       KC_DEL,                                   ____,              ____,               ____,            ____         
 
 #define MIRYOKU_ALTERNATIVES_MOUSE \
 ____,              ____,              ____,              ____,              ____,              ____,                  ____,              ____,              ____,              ____,              ____,              ____,              ____,              ____, \
 ____,              DM_REC1,           DM_PLY1,           DM_REC2,           DM_PLY2,           xxxx,                   U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,               ____,              ____,              ____,             \
 ____,              KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           xxxx,                   xxxx,              KC_MS_L,           KC_MS_D,           KC_MS_U,           KC_MS_R,       ____,              ____,     \
 ____,              TD(U_TD_U_MOUSE),  KC_ALGR,           xxxx,              xxxx,              xxxx,                   xxxx,              KC_WH_L,           KC_WH_D,           KC_WH_U,           KC_WH_R,        ____,       \
-____,            ____,              ____,                           ____,      ____,      KC_BTN1,                              KC_BTN2,           KC_BTN3,           ____,              ____
+____,            ____,                 ____,                           ____,      ____,      KC_BTN1,                              KC_BTN2,           KC_BTN3,           ____,              ____
 
 
 #define MIRYOKU_ALTERNATIVES_MEDIA \
-____,              ____,              ____,              ____,              ____,              ____,                   ____,            KC_MEDIA_PREV_TRACK,  KC_MEDIA_PLAY_PAUSE,   KC_MEDIA_NEXT_TRACK, KC_MUTE,  KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP,              ____, \
-____,              xxxx,              xxxx,              xxxx,              xxxx,              xxxx,                   RGB_TOG,           RGB_MOD,           RGB_HUI,           RGB_SAI,           RGB_VAI,                ____,              ____,              ____,          \
-____,              KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           xxxx,                   xxxx,                KC_MEDIA_PREV_TRACK,   KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP,   KC_MEDIA_NEXT_TRACK,     ____,              ____,       \
-____,              TD(U_TD_U_MEDIA),  KC_ALGR,           xxxx,              xxxx,              xxxx,                   OU_AUTO,           xxxx,              xxxx,              xxxx,              xxxx,           ____,       \
-____,            ____,              ____,                           ____,      ____,  KC_MUTE,                         KC_MEDIA_PLAY_PAUSE,  KC_MEDIA_STOP,     ____,              ____
+A(KC_F4),         ____,              ____,              ____,              ____,              ____,                   ____,            KC_MEDIA_PREV_TRACK,  KC_MEDIA_PLAY_PAUSE,   KC_MEDIA_NEXT_TRACK, KC_MUTE,  KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP,              ____, \
+____,              ____,              ____,              G(KC_E),           G(KC_R),              ____,                ____,            ____,                 ____,           RGB_SAI,           RGB_VAI,                ____,              ____,              ____,          \
+____,              KC_LGUI,           G(S(KC_S)),        KC_LCTL,           KC_LSFT,           ____,                   ____,           KC_MEDIA_PREV_TRACK,   KC_AUDIO_VOL_DOWN, G(KC_L),   KC_MEDIA_NEXT_TRACK,     ____,              ____,       \
+____,              TD(U_TD_U_MEDIA),  KC_ALGR,           ____,              ____,              ____,                   ____,           ____,              ____,              ____,              ____,           G(KC_UP),       \
+____,            ____,              ____,                           ____,      ____,  KC_MUTE,                         KC_MEDIA_PLAY_PAUSE,  G(KC_LEFT),     G(KC_DOWN),              G(KC_RIGHT)
 
 
 
@@ -75,9 +80,9 @@ ____,              xxxx,              KC_RPRN,                  KC_UNDS,        
 // BOTH RIGHT
 #define MIRYOKU_ALTERNATIVES_FUN \
 KC_GRAVE,          KC_F1,             KC_F2,             KC_F3,             KC_F4,             KC_F5,                  KC_F6,             KC_F7,             KC_F8,             KC_F9,             KC_F10,          KC_F11,      KC_F12,              KC_DEL, \
-____,              KC_F12,            KC_F7,             KC_F8,             KC_F9,             KC_PSCR,                xxxx,              xxxx,              TD(U_TD_U_BASE),   TD(U_TD_U_EXTRA),  TD(U_TD_BOOT),                RGB_TOG,              RGB_VAI,         S(RGB_VAI),          \
-KC_CAPSLOCK,       KC_F11,            KC_F4,             KC_F5,             KC_F6,             KC_SCRL,                xxxx,              KC_LSFT,           KC_LCTL,           KC_LALT,           KC_LGUI,                      RGB_HUI,              S(RGB_HUI), \
-____,              KC_F10,            KC_F1,             KC_F2,             KC_F3,             KC_PAUS,                xxxx,              xxxx,              RGB_MOD,           S(RGB_MOD),       RGB_SAI,                     S(RGB_SAI),       \
+____,              KC_F12,            KC_F7,             KC_F8,             KC_F9,             KC_PSCR,                xxxx,              xxxx,              TD(U_TD_U_BASE),   TD(U_TD_U_EXTRA),  TD(U_TD_BOOT),                RGB_TOG,              RGB_VAI,        RGB_VAD,          \
+KC_CAPS_LOCK,      KC_F11,            KC_F4,             KC_F5,             KC_F6,             KC_SCRL,                xxxx,              KC_LSFT,           KC_LCTL,           KC_LALT,           RGB_HUI,         RGB_HUD,     RGB_M_P ,           \
+____,              KC_F10,            KC_F1,             KC_F2,             KC_F3,             KC_PAUS,                xxxx,              xxxx,              RGB_MOD,           RGB_RMOD,         RGB_SAI,                     RGB_SAD,       \
 ____,              xxxx,              KC_TAB,            KC_SPC,           ____,     ____,                      ____,              ____,              ____,             ____
 
 
@@ -87,9 +92,9 @@ ____,              xxxx,              KC_TAB,            KC_SPC,           ____,
 #define MIRYOKU_ALTERNATIVES_BASE_COLEMAKDH \
 KC_ESC,              KC_1,              KC_2,              KC_3,              KC_4,              KC_5,              KC_6,              KC_7,              KC_8,              KC_9,              KC_0,                   KC_MINS,           KC_EQL,            KC_BSPC,   \
 KC_TAB,              KC_Q,              KC_W,              KC_F,              KC_P,              KC_B,              KC_J,              KC_L,              KC_U,              KC_Y,              KC_QUOT,                KC_LBRC,           KC_RBRC,           KC_BSLS,    \
-Y_KEY,              LGUI_T(KC_A),      LALT_T(KC_R),      LCTL_T(KC_S),      LSFT_T(KC_T),      KC_G,              KC_M,              LSFT_T(KC_N),      LCTL_T(KC_E),      LALT_T(KC_I),       LGUI_T(KC_O),            KC_SCLN,           KC_ENT,          \
-KC_LSFT,             KC_Z,               ALGR_T(KC_X),      KC_C,              KC_D,              KC_V,              KC_K,              KC_H,            KC_COMM,         ALGR_T(KC_DOT),       KC_SLSH,                 MT(MOD_RSFT,KC_UP),   \
-KC_LCTL,             LT(U_MEDIA,KC_LWIN),LT(U_NAV,KC_TAB),          LT(U_MOUSE,KC_SPC),  xxxx,   LT(U_SYM,KC_BSPC),                                      LT(U_NUM,KC_ENT),   LT(U_FUN,KC_DEL),  KC_DOWN,                KC_RCTL
+CAPS_KEY,          LWIN_T(KC_A),      LALT_T(KC_R),      LCTL_T(KC_S),      LSFT_T(KC_T),      KC_G,              KC_M,               LSFT_T(KC_N),      LCTL_T(KC_E),      LALT_T(KC_I),       LWIN_T(KC_O),            KC_SCLN,           KC_ENT,          \
+KC_LSFT,           KC_Z,               ALGR_T(KC_X),      KC_C,              KC_D,              KC_V,              KC_K,              KC_H,            KC_COMM,             ALGR_T(KC_DOT),       KC_SLSH,                 MT(MOD_RSFT,KC_UP),   \
+KC_LCTL,           LT(U_MEDIA,KC_LWIN), LT(U_NAV,KC_TAB),                LT(U_MOUSE,KC_SPC),  xxxx,   LT(U_SYM,KC_BSPC),                                 LT(U_NUM,KC_ENT),   LT(U_FUN,KC_DEL),  KC_DOWN,                KC_RCTL
 
 
 

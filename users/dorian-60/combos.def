@@ -3,8 +3,8 @@
 // thumb combos
 // #if defined (MIRYOKU_KLUDGE_THUMBCOMBOS)
 
-COMB( thum_base_right, LT(U_FUN, KC_DEL),            LT(U_SYM, KC_BSPC),     LT(U_NUM, KC_ENT)   )   
-COMB( thum_base_left,  LT(U_MEDIA, KC_LWIN),          LT(U_NAV, KC_TAB),      LT(U_MOUSE, KC_SPC) ) 
+COMB( thum_base_left,  LT(U_MEDIA, KC_LWIN),          LT(U_NUM,KC_TAB),          LT(U_NAV,KC_SPC) ) 
+COMB( thum_base_right, LT(U_FUN, KC_DEL),            LT(U_SYM,KC_BSPC),           LT(U_MOUSE,KC_ENT)   )   
 COMB( thum_nav,        KC_DEL,                       KC_ENT,                 KC_BSPC             )       // NAV layer                
 COMB( thum_mouse,      KC_BTN3,                      KC_BTN2,                KC_BTN1             )       // Mouse layer       
 COMB( thum_media,      KC_MUTE,                      KC_MSTP,                KC_MPLY             )              

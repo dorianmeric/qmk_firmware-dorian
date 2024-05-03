@@ -7,6 +7,8 @@
 
 
 
+// #include "spacebarracecar.h"
+
 
 // MY CUSTOM CODE //////////////////////////////////////////////////////////////////////////////////////////
 #define COMBO_VARIABLE_LEN
@@ -232,9 +234,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 // controls the COMBO timing, to have a more relax timing for the thumb keys
 uint16_t get_combo_term(uint16_t index, combo_t *combo) {
 
-    if (index  <= 5) { // - &thum_base_right
-        return 300;
-    }
+    // if (index  <= 5) { // - &thum_base_right
+    //     return 300;
+    // }
 
     return 50; //COMBO_TERM; 
 }
