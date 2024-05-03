@@ -1,1 +1,1 @@
-make skyloong/gk61/pro_ds:dorian-60
+clear; make skyloong/gk61/pro_ds:dorian-60

@@ -48,7 +48,7 @@ char *alt_codes[][2] = {
         SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_1)SS_TAP(X_KP_2)SS_TAP(X_KP_8)), // Alt+0128 → €
     },
     {
-		    SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_1)SS_TAP(X_KP_6)SS_TAP(X_KP_5)),  // Alt+0165 → ¥
+		SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_1)SS_TAP(X_KP_6)SS_TAP(X_KP_5)),  // Alt+0165 → ¥
         SS_LALT(SS_TAP(X_KP_0)SS_TAP(X_KP_1)SS_TAP(X_KP_6)SS_TAP(X_KP_5)),  // Alt+0165 → ¥
     },
     {
@@ -94,8 +94,13 @@ void u_td_fn_boot(tap_dance_state_t *state, void *user_data) {
 
 #define MIRYOKU_X(LAYER, STRING) \
 void u_td_fn_U_##LAYER(tap_dance_state_t *state, void *user_data) { \
-  if (state->count == 2) { \
-    default_layer_set((layer_state_t)1 << U_##LAYER); \
+    switch (state->count) { \
+        case 1: \
+            default_layer_set((layer_state_t)1 << U_BASE); \
+            break; \
+        case 2: \
+            default_layer_set((layer_state_t)1 << U_##LAYER); \
+            break; \
   } \
 }
 MIRYOKU_LAYER_LIST
@@ -227,7 +232,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 // controls the COMBO timing, to have a more relax timing for the thumb keys
 uint16_t get_combo_term(uint16_t index, combo_t *combo) {
 
-    if (index - thum_base_right <= 5) {
+    if (index  <= 5) { // - &thum_base_right
         return 300;
     }
 

@@ -12,7 +12,7 @@
 
 #define MIRYOKU_ALTERNATIVES_BASE_QWERTY \
 KC_Q,              KC_W,              KC_E,              KC_R,              KC_T,              Y_KEY,             KC_U,              KC_I,              KC_O,              KC_P,              \
-LGUI_T(KC_A),      LALT_T(KC_S),      LCTL_T(KC_D),      LSFT_T(KC_F),      KC_G,              KC_H,              LSFT_T(KC_J),      LCTL_T(KC_K),      LALT_T(KC_L),      LGUI_T(KC_QUOT),   \
+LWIN_T(KC_A),      LALT_T(KC_S),      LCTL_T(KC_D),      LSFT_T(KC_F),      KC_G,              KC_H,              LSFT_T(KC_J),      LCTL_T(KC_K),      LALT_T(KC_L),      LWIN_T(KC_QUOT),   \
 KC_Z,              ALGR_T(KC_X),      KC_C,              KC_V,              KC_B,              KC_N,              KC_M,              KC_COMM,           ALGR_T(KC_DOT),    KC_SLSH,\
 U_NP,              U_NP,              LT(U_MEDIA,KC_ESC),LT(U_NAV,KC_TAB), LT(U_MOUSE,KC_SPC), LT(U_SYM,KC_BSPC),  LT(U_NUM,KC_ENT), LT(U_FUN,KC_DEL),  U_NP,              U_NP
 
@@ -55,7 +55,7 @@ U_NP,              U_NP,              KC_DOT,            KC_0,              KC_M
 // layers for symbols. LEFTMOST RIGHT THUMB
 // remove:  equal/+,  parentheses(?)
 #define MIRYOKU_ALTERNATIVES_SYM \
-KC_GRAVE,          KC_AMPR,           KC_LCBR,           KC_LBRC,           KC_LPRN,                KC_RPRN,           KC_RBRC,           KC_RCBR,           xxxx,              xxxx,               \
+KC_GRAVE,          KC_AMPR,           KC_LCBR,           KC_LBRC,           KC_LPRN,                KC_RPRN,           KC_RBRC,           KC_RCBR,           KC_KP_ASTERISK,    xxxx,               \
 KC_COLN,           KC_DLR,            KC_PERC,           KC_CIRC,           KC_PLUS,                KC_DLR,            KC_LSFT,           KC_LCTL,           KC_LALT,           KC_LGUI,           \
 KC_TILD,           KC_EXLM,           KC_AT,             KC_HASH,           KC_PIPE,                CCY_POUND,         CCY_EURO,          CCY_YEN,           KC_ALGR,           TD(U_TD_U_SYM),              \
 U_NP,              U_NP,              xxxx,              KC_RPRN,           KC_UNDS,                xxxx,              xxxx,              xxxx,              U_NP,              U_NP
