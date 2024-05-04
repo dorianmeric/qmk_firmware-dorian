@@ -41,24 +41,6 @@ ____,            KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSF
 A(KC_LSFT),      KC_END,            KC_ALGR,           TD(U_TD_U_NAV),    KC_INS,            CW_TOGG,                RSFT(KC_END),      RCTL(KC_DEL),      KC_DEL,           KC_PGUP,           KC_END,                ____,       \
 A(KC_LCTL),       ____,              ____,                           ____,      ____,       KC_DEL,                                   ____,              ____,               ____,            ____         
 
-#define MIRYOKU_ALTERNATIVES_MOUSE \
-____,              ____,              ____,              ____,              ____,              ____,                  ____,              ____,              ____,              ____,              ____,              ____,              ____,              ____, \
-____,              DM_REC1,           DM_PLY1,           DM_REC2,           DM_PLY2,           xxxx,                   U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,               ____,              ____,              ____,             \
-____,              KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           xxxx,                   xxxx,              KC_MS_L,           KC_MS_D,           KC_MS_U,           KC_MS_R,       ____,              ____,     \
-____,              TD(U_TD_U_MOUSE),  KC_ALGR,           xxxx,              xxxx,              xxxx,                   xxxx,              KC_WH_L,           KC_WH_D,           KC_WH_U,           KC_WH_R,        ____,       \
-____,            ____,                 ____,                           ____,      ____,      KC_BTN1,                              KC_BTN2,           KC_BTN3,           ____,              ____
-
-
-#define MIRYOKU_ALTERNATIVES_MEDIA \
-A(KC_F4),         ____,              ____,              ____,              ____,              ____,                   ____,            KC_MEDIA_PREV_TRACK,  KC_MEDIA_PLAY_PAUSE,   KC_MEDIA_NEXT_TRACK, KC_MUTE,  KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP,              ____, \
-____,              ____,              ____,              G(KC_E),           G(KC_R),              ____,                ____,            ____,                 ____,           RGB_SAI,           RGB_VAI,                ____,              ____,              ____,          \
-____,              KC_LGUI,           G(S(KC_S)),        KC_LCTL,           KC_LSFT,           ____,                   ____,           KC_MEDIA_PREV_TRACK,   KC_AUDIO_VOL_DOWN, G(KC_L),   KC_MEDIA_NEXT_TRACK,     ____,              ____,       \
-____,              TD(U_TD_U_MEDIA),  KC_ALGR,           ____,              ____,              ____,                   ____,           ____,              ____,              ____,              ____,           G(KC_UP),       \
-____,            ____,              ____,                           ____,      ____,  KC_MUTE,                         KC_MEDIA_PLAY_PAUSE,  G(KC_LEFT),     G(KC_DOWN),              G(KC_RIGHT)
-
-
-
-// RIGHTMOST RIGHT THUMB
 // Needs to be an "Excel" layer:
 // parentheses (open and close), e, dot, +, -, *, /, circ, =, comma(?), f4, f2(maybe)
 #define MIRYOKU_ALTERNATIVES_NUM \
@@ -68,6 +50,17 @@ ____,              KC_SCLN,           KC_4,              KC_5,              KC_6
 ____,              KC_DOT,            KC_1,              KC_2,              KC_3,              KC_BSLS,                KC_F4,             KC_DOT,            xxxx,              KC_ALGR,           TD(U_TD_U_NUM),         ____,         \
 ____,              KC_DOT,            KC_0,                          KC_MINS,      ____,     ____,                      ____,              ____,              ____,             ____
 
+#define MIRYOKU_ALTERNATIVES_MEDIA \
+A(KC_F4),         ____,              ____,              ____,              ____,              ____,                   ____,            KC_MEDIA_PREV_TRACK,  KC_MEDIA_PLAY_PAUSE,   KC_MEDIA_NEXT_TRACK, KC_MUTE,  KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP,              ____, \
+____,              ____,              ____,              G(KC_E),           G(KC_R),           ____,                ____,            ____,                 ____,           ____,           ____,                ____,              ____,              ____,          \
+____,              KC_LGUI,           G(S(KC_S)),        KC_LCTL,           KC_LSFT,           ____,                   ____,           KC_MEDIA_PREV_TRACK,   KC_AUDIO_VOL_DOWN, G(KC_L),   KC_MEDIA_NEXT_TRACK,     ____,              ____,       \
+____,              TD(U_TD_U_MEDIA),  KC_ALGR,           ____,              ____,              ____,                   ____,           ____,              ____,              ____,              ____,           G(KC_UP),       \
+____,            ____,              ____,                           ____,      ____,  KC_MUTE,                         KC_MEDIA_PLAY_PAUSE,  G(KC_LEFT),     G(KC_DOWN),              G(KC_RIGHT)
+
+
+
+// RIGHTMOST RIGHT THUMB
+
 // layers for symbols. LEFTMOST RIGHT THUMB
 // remove:  equal/+,  parentheses(?)
 #define MIRYOKU_ALTERNATIVES_SYM \
@@ -76,6 +69,13 @@ ____,              KC_GRAVE,          KC_AMPR,           KC_LCBR,           KC_L
 ____,              KC_COLN,           KC_DLR,            KC_PERC,           KC_CIRC,           KC_PLUS,                KC_DLR,            KC_LSFT,           KC_LCTL,           KC_LALT,           KC_LGUI,           ____,              ____, \
 ____,              KC_TILD,           KC_EXLM,           KC_AT,             KC_HASH,           KC_PIPE,                CCY_POUND,         CCY_EURO,          CCY_YEN,           KC_ALGR,           TD(U_TD_U_SYM),       ____,           \
 ____,              xxxx,              KC_RPRN,                  KC_UNDS,          ____,     ____,                      ____,              ____,              ____,             ____
+
+#define MIRYOKU_ALTERNATIVES_MOUSE \
+____,              ____,              ____,              ____,              ____,              ____,                  ____,               KC_MEDIA_PREV_TRACK,  KC_MEDIA_PLAY_PAUSE,   KC_MEDIA_NEXT_TRACK, KC_MUTE,  KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP,              ____, \
+____,              DM_REC1,           DM_PLY1,           DM_REC2,           DM_PLY2,           xxxx,                   U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,               ____,              ____,              ____,             \
+____,              KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           xxxx,                   xxxx,              KC_MS_L,           KC_MS_D,           KC_MS_U,           KC_MS_R,       ____,              ____,     \
+____,              TD(U_TD_U_MOUSE),  KC_ALGR,           xxxx,              xxxx,              xxxx,                   xxxx,              KC_WH_L,           KC_WH_D,           KC_WH_U,           KC_WH_R,        ____,       \
+____,            ____,                 ____,                           ____,      ____,      KC_BTN1,                              KC_BTN2,           KC_BTN3,           ____,              ____
 
 // BOTH RIGHT
 #define MIRYOKU_ALTERNATIVES_FUN \
