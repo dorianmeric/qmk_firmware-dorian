@@ -32,7 +32,7 @@ U_NP,              U_NP,              LT(U_MEDIA,KC_ESC),LT(U_NAV,KC_TAB), LT(U_
 
 // added Capslock to (NAV) Left-hand top right, and Insert just below
 // Redo = Ctrl+Y
-// Undo = Ctrl+Z
+// Undo = Ctrl+Z    
 #define MIRYOKU_ALTERNATIVES_NAV \
 KC_HOME,           LCTL(KC_W),        LCTL(KC_T),        KC_WWW_REFRESH,    KC_PGUP,                KC_WWW_BACK,       KC_WWW_FORWARD,    xxxx,              xxxx,              xxxx,             \
 KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           KC_PGDN,                xxxx,              KC_LEFT,           KC_DOWN,           KC_UP,             KC_RGHT,           \
@@ -74,7 +74,7 @@ U_NP,              U_NP,              xxxx,              KC_RPRN,           KC_U
 
 // BOTH RIGHT
 #define MIRYOKU_ALTERNATIVES_FUN \
-KC_F12,            KC_F7,             KC_F8,             KC_F9,             KC_PSCR,                xxxx,              xxxx,              TD(U_TD_U_BASE),   TD(U_TD_U_EXTRA),  TD(U_TD_BOOT),            \
+KC_F12,            KC_F7,             KC_F8,             KC_F9,             KC_PSCR,                xxxx,              xxxx,              DF(U_BASE),       DF(U_EXTRA),       TD(U_TD_BOOT),            \
 KC_F11,            KC_F4,             KC_F5,             KC_F6,             KC_SCRL,                xxxx,              KC_LSFT,           KC_LCTL,           KC_LALT,           KC_LGUI,           \
 KC_F10,            KC_F1,             KC_F2,             KC_F3,             KC_PAUS,                xxxx,              xxxx,              xxxx,              KC_ALGR,           TD(U_TD_U_FUN),              \
 U_NP,              U_NP,              xxxx,              KC_TAB,            KC_SPC,                 xxxx,              xxxx,              xxxx,              U_NP,              U_NP
