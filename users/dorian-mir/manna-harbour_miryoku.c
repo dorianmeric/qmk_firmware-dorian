@@ -24,6 +24,7 @@ enum custom_keycodes {
     FR_E_AIGU,
     FR_E_CIRC,
     FR_U_CIRC,
+    JIGGLE,
 };
 
 // £ 0163
@@ -193,11 +194,13 @@ const key_override_t **key_overrides = (const key_override_t *[]){
 
 
 // https://github.com/qmk/qmk_firmware/blob/master/docs/custom_quantum_functions.md
+// If these functions return true QMK will process the keycodes as usual. That can be handy for extending the functionality of a key rather than replacing it. If these functions return false QMK will skip the normal key handling, and it will be up to you to send any key up or down events that are required.
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
-    // CCY SHORTCUTS
     if (record->event.pressed) {
         switch (keycode) {
+
+                // CCY SHORTCUTS
                 case CCY_POUND: 
                 case CCY_EURO: 
                 case CCY_YEN: {
@@ -212,12 +215,77 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     if (shift & MOD_BIT(KC_LSFT)) register_code(KC_LSFT);
                     if (shift & MOD_BIT(KC_RSFT)) register_code(KC_RSFT);
 
-                    return false;
+                    return false; // Skip all further processing of this key
                 }
+
+                // Shift + Backspace = Delete
+                case LT(U_SYM,KC_BSPC): {
+                    static uint16_t registered_key = KC_NO;
+                    if (record->event.pressed) {  // On key press.
+                        const uint8_t mods = get_mods();
+                            #ifndef NO_ACTION_ONESHOT
+                                    uint8_t shift_mods = (mods | get_oneshot_mods()) & MOD_MASK_SHIFT;
+                            #else
+                                    uint8_t shift_mods = mods & MOD_MASK_SHIFT;
+                            #endif  // NO_ACTION_ONESHOT
+                        if (shift_mods) {  // At least one shift key is held.
+                            registered_key = KC_DEL;
+                            // If one shift is held, clear it from the mods. But if both
+                            // shifts are held, leave as is to send Shift + Del.
+                            if (shift_mods != MOD_MASK_SHIFT) {
+                                #ifndef NO_ACTION_ONESHOT
+                                            del_oneshot_mods(MOD_MASK_SHIFT);
+                                #endif  // NO_ACTION_ONESHOT
+                                unregister_mods(MOD_MASK_SHIFT);
+                            }
+                        } else {
+                            registered_key = KC_BSPC;
+                        }
+
+                        register_code(registered_key);
+                        set_mods(mods); 
+                        
+                    } else {  // On key release.
+                        unregister_code(registered_key);
+                    }
+                    return false; // Skip all further processing of this key
+                } 
         }
     }
 
-    return true;
+
+
+    // JIGGLE 
+    if (record->event.pressed) {
+        static deferred_token token = INVALID_DEFERRED_TOKEN;
+        static report_mouse_t report = {0};
+        if (token) {
+            // If jiggler is currently running, stop when any key is pressed.
+            cancel_deferred_exec(token);
+            token = INVALID_DEFERRED_TOKEN;
+            report = (report_mouse_t){};  // Clear the mouse.
+            host_mouse_send(&report);
+        } else if (keycode == JIGGLE) {
+
+            uint32_t jiggler_callback(uint32_t trigger_time, void* cb_arg) {
+            // Deltas to move in a circle of radius 20 pixels over 32 frames.
+            static const int8_t deltas[32] = {
+                0, -1, -2, -2, -3, -3, -4, -4, -4, -4, -3, -3, -2, -2, -1, 0,
+                0, 1, 2, 2, 3, 3, 4, 4, 4, 4, 3, 3, 2, 2, 1, 0};
+            static uint8_t phase = 0;
+            // Get x delta from table and y delta by rotating a quarter cycle.
+            report.x = deltas[phase];
+            report.y = deltas[(phase + 8) & 31];
+            phase = (phase + 1) & 31;
+            host_mouse_send(&report);
+            return 16;  // Call the callback every 16 ms.
+            }
+
+            token = defer_exec(1, jiggler_callback, NULL);  // Schedule callback.
+        }
+    }
+
+    return true; // Process all other keycodes normally
 }
 
 
@@ -237,4 +305,16 @@ uint16_t get_combo_term(uint16_t index, combo_t *combo) {
     }
 
     return 50; //COMBO_TERM; 
+}
+
+// https://docs.qmk.fm/#/tap_hold?id=tap-hold-configuration-optionszt
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        // case SFT_T(KC_SPC):
+        //     return TAPPING_TERM + 1250;
+        // case LT(1, KC_GRV):
+        //     return 130;
+        default:
+            return 400; // TAPPING_TERM;
+    }
 }

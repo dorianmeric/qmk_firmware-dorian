@@ -19,9 +19,9 @@ COMB( thum_num,        KC_DOT,                       KC_0,                   KC_
 // Left Hand
 
 // COMB(combo10,     KC_TAB,                   KC_W,           KC_E            )       // w+e = Tab
-COMB(combo14,     LSFT(KC_F9),              KC_R,              KC_T         )       // r+t = Shift+F9
-COMB(combo13,     KC_ESC,                   KC_W,              KC_E         )       // w+e = Esc
-COMB(combo11,     LCTL(KC_S),               KC_E,              KC_R         )       // e+r =  Ctrl+S
+COMB(combo14,     LSFT(KC_F9),              KC_Z,              KC_G         )       // r+t = Shift+F9
+// COMB(combo13,     KC_ESC,                   KC_W,              KC_E         )       // w+e = Esc
+COMB(combo11,     LCTL(KC_S),               KC_Z,           LSFT_T(KC_F)         )       // e+r =  Ctrl+S
 COMB(combo18,     LCTL(KC_X),               KC_Z,           ALGR_T(KC_X)    )       // z+x = Ctrl+x
 COMB(combo16,     LCTL(KC_C),               ALGR_T(KC_X),   KC_C            )       // x+c = Ctrl+c
 COMB(combo17,     LCTL(KC_V),               KC_C,           KC_V            )       // c+v = Ctrl+v
@@ -41,8 +41,8 @@ COMB(combo05,     RCTL(KC_DEL),             KC_M,           KC_COMM         )   
 COMB(combo06,     RSFT(KC_END),             KC_N,           KC_M            )            // n+m = Select line right
 
 COMB(combo07,     KC_MINUS,                 KC_H,           LSFT_T(KC_J)    )           // h+j = -  , can also get _ with a Shift
-COMB(combo08,     KC_COLN,                  KC_H,           LCTL_T(KC_K)    )           // j+k = :
-COMB(combo09,     KC_SCLN,                  KC_H,           LALT_T(KC_L)    )     // k+l = ;
+COMB(combo08,     KC_SEMICOLON,             KC_H,           KC_N    )           // m+k = :
+// COMB(combo09,     KC_SCLN,                  KC_H,           LALT_T(KC_L)    )            // k+l = ;
 
 COMB(combo98,     QK_BOOTLOADER,            KC_Q, KC_W, KC_E, KC_R, KC_T)       // whole top row = puts the mcu in bootloader mode
 

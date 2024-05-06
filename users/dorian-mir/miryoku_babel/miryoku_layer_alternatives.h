@@ -1,3 +1,8 @@
+
+
+
+
+
 // Copyright 2022 Manna Harbour
 // https://github.com/manna-harbour/miryoku
 // generated -*- buffer-read-only: t -*-
@@ -10,11 +15,18 @@
 #define xxxx  KC_NO // present but not available for use
 #define Y_KEY MT(MOD_RCTL | MOD_RALT | MOD_RSFT,KC_Y)
 
+
 #define MIRYOKU_ALTERNATIVES_BASE_QWERTY \
 KC_Q,              KC_W,              KC_E,              KC_R,              KC_T,              Y_KEY,             KC_U,              KC_I,              KC_O,              KC_P,              \
 LWIN_T(KC_A),      LALT_T(KC_S),      LCTL_T(KC_D),      LSFT_T(KC_F),      KC_G,              KC_H,              LSFT_T(KC_J),      LCTL_T(KC_K),      LALT_T(KC_L),      LWIN_T(KC_QUOT),   \
 KC_Z,              ALGR_T(KC_X),      KC_C,              KC_V,              KC_B,              KC_N,              KC_M,              KC_COMM,           ALGR_T(KC_DOT),    KC_SLSH,\
 U_NP,              U_NP,              LT(U_MEDIA,KC_ESC),LT(U_NAV,KC_TAB), LT(U_MOUSE,KC_SPC), LT(U_SYM,KC_BSPC),  LT(U_NUM,KC_ENT), LT(U_FUN,KC_DEL),  U_NP,              U_NP
+
+#define MIRYOKU_ALTERNATIVES_BASE_COLEMAKDH \
+KC_Q,              KC_W,              KC_F,              KC_P,              KC_B,              KC_J,              KC_L,              KC_U,              Y_KEY,              KC_QUOT,           \
+LGUI_T(KC_A),      LALT_T(KC_R),      LCTL_T(KC_S),      LSFT_T(KC_T),      KC_G,              KC_M,              LSFT_T(KC_N),      LCTL_T(KC_E),      LALT_T(KC_I),      LGUI_T(KC_O),      \
+KC_Z,               ALGR_T(KC_X),      KC_C,              KC_D,              KC_V,              KC_K,              KC_H,              KC_COMM,           ALGR_T(KC_DOT),      KC_SLSH,\
+U_NP,              U_NP,              LT(U_MEDIA,KC_ESC),LT(U_NAV,KC_TAB), LT(U_MOUSE,KC_SPC), LT(U_SYM,KC_BSPC),  LT(U_NUM,KC_ENT), LT(U_FUN,KC_DEL),   U_NP,              U_NP
 
 
 
@@ -22,15 +34,15 @@ U_NP,              U_NP,              LT(U_MEDIA,KC_ESC),LT(U_NAV,KC_TAB), LT(U_
 // Redo = Ctrl+Y
 // Undo = Ctrl+Z
 #define MIRYOKU_ALTERNATIVES_NAV \
-KC_HOME,           LCTL(KC_W),        LCTL(KC_T),        KC_WWW_REFRESH,    KC_PGUP,                U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             \
+KC_HOME,           LCTL(KC_W),        LCTL(KC_T),        KC_WWW_REFRESH,    KC_PGUP,                KC_WWW_BACK,       KC_WWW_FORWARD,    xxxx,              xxxx,              xxxx,             \
 KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           KC_PGDN,                xxxx,              KC_LEFT,           KC_DOWN,           KC_UP,             KC_RGHT,           \
 KC_END,            KC_ALGR,           TD(U_TD_U_NAV),    KC_INS,            CW_TOGG,                xxxx,              KC_HOME,           KC_PGDN,           KC_PGUP,           KC_END,            \
 U_NP,              U_NP,              xxxx,              xxxx,              xxxx,                   KC_BSPC,           KC_ENT,           KC_DEL,            U_NP,              U_NP
 
 #define MIRYOKU_ALTERNATIVES_MOUSE \
-DM_REC1,           DM_PLY1,           DM_REC2,           DM_PLY2,           xxxx,                   U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             \
-KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           xxxx,                   xxxx,              KC_MS_L,           KC_MS_D,           KC_MS_U,           KC_MS_R,           \
-TD(U_TD_U_MOUSE),  KC_ALGR,           xxxx,              xxxx,              xxxx,                   xxxx,              KC_WH_L,           KC_WH_D,           KC_WH_U,           KC_WH_R,           \
+DM_REC1,           DM_PLY1,           DM_REC2,           DM_PLY2,           LSFT(KC_F9),            KC_WWW_BACK,       KC_WWW_FORWARD,    xxxx,              xxxx,              JIGGLE,             \
+KC_LGUI,           KC_LALT,           KC_LCTL,           C(KC_S),           xxxx,                   xxxx,              KC_MS_L,           KC_MS_D,           KC_MS_U,           KC_MS_R,           \
+xxxx,              RSFT(KC_HOME),     RCTL(KC_BSPC),     RCTL(KC_DEL),      RSFT(KC_END),           xxxx,              KC_WH_L,           KC_WH_D,           KC_WH_U,           KC_WH_R,           \
 U_NP,              U_NP,              xxxx,              xxxx,              xxxx,                   KC_BTN1,           KC_BTN2,           KC_BTN3,           U_NP,              U_NP
 
 
@@ -66,17 +78,6 @@ KC_F12,            KC_F7,             KC_F8,             KC_F9,             KC_P
 KC_F11,            KC_F4,             KC_F5,             KC_F6,             KC_SCRL,                xxxx,              KC_LSFT,           KC_LCTL,           KC_LALT,           KC_LGUI,           \
 KC_F10,            KC_F1,             KC_F2,             KC_F3,             KC_PAUS,                xxxx,              xxxx,              xxxx,              KC_ALGR,           TD(U_TD_U_FUN),              \
 U_NP,              U_NP,              xxxx,              KC_TAB,            KC_SPC,                 xxxx,              xxxx,              xxxx,              U_NP,              U_NP
-
-
-
-
-
-#define MIRYOKU_ALTERNATIVES_BASE_COLEMAKDH \
-KC_Q,              KC_W,              KC_F,              KC_P,              KC_B,              KC_J,              KC_L,              KC_U,              KC_Y,              KC_QUOT,           \
-LGUI_T(KC_A),      LALT_T(KC_R),      LCTL_T(KC_S),      LSFT_T(KC_T),      KC_G,              KC_M,              LSFT_T(KC_N),      LCTL_T(KC_E),      LALT_T(KC_I),      LGUI_T(KC_O),      \
-KC_Z,               ALGR_T(KC_X),      KC_C,              KC_D,              KC_V,              KC_K,              KC_H,              KC_COMM,           ALGR_T(KC_DOT),      KC_SLSH,\
-U_NP,              U_NP,              LT(U_MEDIA,KC_ESC),LT(U_NAV,KC_TAB), LT(U_MOUSE,KC_SPC), LT(U_SYM,KC_BSPC),  LT(U_NUM,KC_ENT), LT(U_FUN,KC_DEL),   U_NP,              U_NP
-
 
 
 

@@ -2,7 +2,7 @@
 # https://github.com/manna-harbour/miryoku
 
 MIRYOKU_ALPHAS=QWERTY 
-MIRYOKU_EXTRA=COLEMAKDH  
+MIRYOKU_EXTRA=COLEMAKDHFATZ  
 MIRYOKU_TAP=QWERTY # I remove the shortcut to go to the Tap layer (as getting out requires resetting the keyboard)
 MIRYOKU_CLIPBOARD=WIN # sets the shortcuts to be "Ctrl+V , Ctrl+C" etc
 COMBO_ENABLE=yes
