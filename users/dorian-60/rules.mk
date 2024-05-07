@@ -8,8 +8,12 @@ TAP_DANCE_ENABLE = yes
 CAPS_WORD_ENABLE = yes
 KEY_OVERRIDE_ENABLE = yes
 
-INTROSPECTION_KEYMAP_C = dorian-60.c # keymaps
+INTROSPECTION_KEYMAP_C = dorian-60.c # keymaps  
+ 
+MOUSE_ENABLE = yes
+DEFERRED_EXEC_ENABLE = yes
 
+DYNAMIC_MACRO_ENABLE = yes # to be able to record macros
 
 include users/dorian-60/custom_rules.mk
 

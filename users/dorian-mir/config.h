@@ -50,6 +50,7 @@
 #define COMBO_TERM_PER_COMBO
 
 
+#define FORCE_NKRO // needed for quicker macros
 
 /*
 * `#define TAPPING_TERM 200`

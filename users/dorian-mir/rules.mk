@@ -11,6 +11,12 @@ KEY_OVERRIDE_ENABLE = yes
 MOUSE_ENABLE = yes
 DEFERRED_EXEC_ENABLE = yes
 
+DYNAMIC_MACRO_ENABLE = yes # to be able to record macros
+NKRO_ENABLE = yes
+COMBO_ENABLE = yes
+
+# VIA_ENABLE = yes
+
 INTROSPECTION_KEYMAP_C = manna-harbour_miryoku.c # keymaps
 
 include users/dorian-mir/custom_rules.mk
