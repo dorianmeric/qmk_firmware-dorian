@@ -283,6 +283,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         // case LT(1, KC_GRV):
         //     return 130;
         default:
-            return 400; // TAPPING_TERM;
+            return 300; // TAPPING_TERM;
     }
 }

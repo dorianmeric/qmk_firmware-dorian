@@ -9,7 +9,7 @@
 
 // default but used in macros
 #undef TAPPING_TERM
-#define TAPPING_TERM 400 // 200ms originally
+#define TAPPING_TERM 300 // 200ms originally
 #define TAPPING_TERM_PER_KEY
 
 // // Prevent normal rollover on alphas from accidentally triggering mods.
@@ -51,6 +51,11 @@
 
 
 #define FORCE_NKRO // needed for quicker macros
+#define DYNAMIC_MACRO_NO_NESTING  // disables recursive macros
+
+#define TAP_CODE_DELAY 10 // default 0 
+
+
 
 /*
 * `#define TAPPING_TERM 200`
