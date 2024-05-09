@@ -12,6 +12,8 @@ INTROSPECTION_KEYMAP_C = dorian-60.c # keymaps
  
 MOUSE_ENABLE = yes
 DEFERRED_EXEC_ENABLE = yes
+NKRO_ENABLE = yes
+COMBO_ENABLE = yes
 
 DYNAMIC_MACRO_ENABLE = yes # to be able to record macros
 

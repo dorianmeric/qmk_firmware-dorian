@@ -17,7 +17,7 @@ COMBO_ENABLE = yes
 
 # VIA_ENABLE = yes
 
-INTROSPECTION_KEYMAP_C = manna-harbour_miryoku.c # keymaps
+INTROSPECTION_KEYMAP_C = dorian-ferris.c # keymaps
 
 include users/dorian-mir/custom_rules.mk
 

@@ -24,27 +24,27 @@ COMB( thum_num,        KC_DOT,                       KC_0,                   KC_
 // COMB(combo11,     LCTL(KC_S),               KC_Z,           LSFT_T(KC_F)         )       // e+r =  Ctrl+S
 COMB(combo18,     LCTL(KC_X),               KC_Z,           ALGR_T(KC_X)    )       // z+x = Ctrl+x
 COMB(combo16,     LCTL(KC_C),               ALGR_T(KC_X),   KC_C            )       // x+c = Ctrl+c
-COMB(combo17,     LCTL(KC_V),               KC_C,           KC_V            )       // c+v = Ctrl+v
+COMB(combo17,     LCTL(KC_V),               KC_C,           KC_D            )       // c+v = Ctrl+v
 
-COMB(combo99,     QK_BOOTLOADER,            Y_KEY, KC_U, KC_I, KC_O, KC_P)       // whole top row = puts the mcu in bootloader mode
+COMB(combo98,     QK_BOOTLOADER,            KC_Q,  KC_W, KC_F,  KC_P,  KC_B)       // whole top row = puts the mcu in bootloader mode
 
 
 // Right Hand
 
 // COMB(combo00,     KC_BSPC,                  KC_I,           KC_O            )        // i+o = Backspace uy  yu
-COMB(combo01,     RCTL(KC_BSPC),            Y_KEY,          KC_U            )           // u++i = Backspace Word
+COMB(combo01,     RCTL(KC_BSPC),            J_KEY,          KC_L            )           // u++i = Backspace Word
 // COMB(combo02,     RSFT(KC_HOME),            Y_KEY,          KC_U            )            // y+u = Select line left
 // COMB(combo03,     KC_ENT,                   KC_K,           KC_L            )       // k+l = Enter
 
 // COMB(combo04,     KC_DEL,                   KC_COMM,        ALGR_T(KC_DOT)  )           // ,+. = Del   ,.
-COMB(combo05,     RCTL(KC_DEL),             KC_I,           KC_O          )           // m+, = delete next word     h,
+COMB(combo05,     RCTL(KC_DEL),             KC_U,           KC_Y         )           // m+, = delete next word     h,
 // COMB(combo06,     RSFT(KC_END),             KC_N,           KC_M            )            // n+m = Select line right   kh
 
-COMB(combo07,     KC_MINUS,                 KC_H,           LSFT_T(KC_J)    )           // h+j = -  , can also get _ with a Shift   
-COMB(combo08,     KC_SEMICOLON,             KC_H,           KC_N    )                   // m+k = :
+COMB(combo07,     KC_MINUS,                 KC_M,           LSFT_T(KC_N)    )           // h+j = -  , can also get _ with a Shift   
+COMB(combo08,     KC_SEMICOLON,             KC_M,           KC_K    )                   // m+k = :
 
 // COMB(combo09,     KC_SCLN,                  KC_H,           LALT_T(KC_L)    )            // k+l = ;
+COMB(combo99,     QK_BOOTLOADER,            J_KEY,              KC_L,              KC_U,             KC_Y,              KC_SLSH)       // whole top row = puts the mcu in bootloader mode
 
-COMB(combo98,     QK_BOOTLOADER,            KC_Q, KC_W, KC_E, KC_R, KC_T)       // whole top row = puts the mcu in bootloader mode
 
 // COMB(combo20,     KC_DEL,                   KC_LSFT,      KC_BSPC           )     DOESNT WORK      // Shift+Backspacke = Del
