@@ -43,7 +43,7 @@ U_NP,              U_NP,              xxxx,              xxxx,              xxxx
 #define MIRYOKU_ALTERNATIVES_MOUSE \
 DM_REC1,           DM_PLY1,           DM_REC2,           DM_PLY2,           DM_RSTP,                KC_WWW_BACK,       KC_WWW_FORWARD,    xxxx,              xxxx,              JIGGLE,             \
 KC_LGUI,           KC_LALT,           KC_LCTL,           C(KC_S),           LSFT(KC_F9),            xxxx,              KC_MS_L,           KC_MS_D,           KC_MS_U,           KC_MS_R,           \
-xxxx,              RSFT(KC_HOME),     RCTL(KC_BSPC),     RCTL(KC_DEL),      RSFT(KC_END),           xxxx,              KC_WH_L,           KC_WH_D,           KC_WH_U,           KC_WH_R,           \
+TD(U_TD_U_MOUSE),  RSFT(KC_HOME),     RCTL(KC_BSPC),     RCTL(KC_DEL),      RSFT(KC_END),           xxxx,              KC_WH_L,           KC_WH_D,           KC_WH_U,           KC_WH_R,           \
 U_NP,              U_NP,              xxxx,              xxxx,              xxxx,                   KC_BTN1,           KC_BTN2,           KC_BTN3,           U_NP,              U_NP
 
 
