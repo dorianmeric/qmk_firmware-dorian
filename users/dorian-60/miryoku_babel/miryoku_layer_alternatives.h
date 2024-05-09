@@ -67,8 +67,8 @@ ____,              TD(U_TD_U_MOUSE),  RSFT(KC_HOME),     RCTL(KC_BSPC),     RCTL
 ____,            ____,                 ____,                           ____,      ____,      KC_BTN1,                       KC_BTN2,           KC_BTN3,           ____,              ____
 
 #define MIRYOKU_ALTERNATIVES_MEDIA \
-A(KC_F4),         ____,              ____,              ____,              ____,              ____,                         ____,            KC_MEDIA_PREV_TRACK,  KC_MEDIA_PLAY_PAUSE,   KC_MEDIA_NEXT_TRACK, KC_MUTE,  KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP,              ____, \
-____,              ____,              ____,              ____,           ____,           ____,                        ____,            G(KC_L),                 ____,           ____,           ____,                ____,              ____,              ____,          \
+A(KC_F4),         ____,              ____,              ____,                ____,              ____,                         ____,            KC_MEDIA_PREV_TRACK,  KC_MEDIA_PLAY_PAUSE,   KC_MEDIA_NEXT_TRACK, KC_MUTE,  KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP,              ____, \
+____,              ____,              ____,              ____,               ____,              ____,                       ____,            G(KC_L),                 ____,           ____,           ____,                ____,              ____,              ____,          \
 ____,              KC_LGUI,           G(KC_R),        G(S(KC_S)),           KC_LSFT,           ____,                        ____,           KC_MEDIA_PREV_TRACK,   G(KC_E), ____,   KC_MEDIA_NEXT_TRACK,     ____,              ____,       \
 ____,              TD(U_TD_U_MEDIA),  KC_ALGR,           ____,              ____,              ____,                        ____,           ____,              ____,              ____,              ____,           G(KC_UP),       \
 ____,            ____,              ____,                           ____,      ____,  KC_MUTE,                              KC_MEDIA_PLAY_PAUSE,  G(KC_LEFT),     G(KC_DOWN),              G(KC_RIGHT)
