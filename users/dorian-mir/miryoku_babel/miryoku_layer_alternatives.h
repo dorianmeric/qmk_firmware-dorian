@@ -48,7 +48,7 @@ U_NP,              U_NP,              xxxx,              xxxx,              xxxx
 
 
 #define MIRYOKU_ALTERNATIVES_MEDIA \
-xxxx,              xxxx,              xxxx,              xxxx,              xxxx,                   RGB_TOG,           RGB_MOD,           RGB_HUI,           RGB_SAI,           RGB_VAI,           \
+xxxx,              xxxx,              xxxx,              xxxx,              KC_MEDIA_PLAY_PAUSE,    RGB_TOG,           RGB_MOD,           RGB_HUI,           RGB_SAI,           RGB_VAI,           \
 KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           xxxx,                   xxxx,          KC_MEDIA_PREV_TRACK,   KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP,   KC_MEDIA_NEXT_TRACK,           \
 TD(U_TD_U_MEDIA),  KC_ALGR,           xxxx,              xxxx,              xxxx,                   OU_AUTO,           xxxx,              xxxx,              xxxx,              xxxx,              \
 U_NP,              U_NP,              xxxx,              xxxx,              xxxx,                   KC_MUTE,        KC_MEDIA_PLAY_PAUSE,  KC_MEDIA_STOP,     U_NP,              U_NP
@@ -60,8 +60,8 @@ U_NP,              U_NP,              xxxx,              xxxx,              xxxx
 // Needs to be an "Excel" layer:
 // parentheses (open and close), e, dot, +, -, *, /, circ, =, comma(?), f4, f2(maybe)
 #define MIRYOKU_ALTERNATIVES_NUM \
-KC_LBRC,           KC_7,              KC_8,              KC_9,              KC_RBRC,                KC_CIRC,           KC_KP_PLUS,        KC_KP_MINUS,       KC_KP_ASTERISK,    KC_KP_SLASH,              \
-KC_SCLN,           KC_4,              KC_5,              KC_6,              KC_EQL,                 KC_E,              KC_LSFT,           KC_LCTL,           KC_LALT,           KC_LGUI,           \
+KC_LPRN,           KC_7,              KC_8,              KC_9,              KC_RPRN,                KC_CIRC,           KC_KP_PLUS,        KC_KP_MINUS,       KC_KP_ASTERISK,    KC_KP_SLASH,              \
+KC_COMM,           KC_4,              KC_5,              KC_6,              KC_EQL,                 KC_E,              KC_LSFT,           KC_LCTL,           KC_LALT,           KC_LGUI,           \
 KC_DOT,            KC_1,              KC_2,              KC_3,              KC_BSLS,                KC_F4,             KC_DOT,            xxxx,              KC_ALGR,           TD(U_TD_U_NUM),              \
 U_NP,              U_NP,              KC_DOT,            KC_0,              KC_MINS,                KC_BSPC,           xxxx,              xxxx,              U_NP,              U_NP
 
