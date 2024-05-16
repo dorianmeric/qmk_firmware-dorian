@@ -16,9 +16,9 @@ MIRYOKU_X(MOUSE,  "Mouse") \
 MIRYOKU_X(MEDIA,  "Media") \
 MIRYOKU_X(NUM,    "Num") \
 MIRYOKU_X(SYM,    "Sym") \
-MIRYOKU_X(TAP,    "Tap") \
 MIRYOKU_X(FUN,    "Fun")
 
 #endif
 
+/* MIRYOKU_X(TAP,    "Tap") \ // DISABLED
 // MIRYOKU_X(BUTTON, "Button") \ // STUPID, ACTIVATES AUTOMATICALLY?? */

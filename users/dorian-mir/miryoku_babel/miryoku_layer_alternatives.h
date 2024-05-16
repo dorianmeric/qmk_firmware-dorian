@@ -75,11 +75,18 @@ U_NP,              U_NP,              xxxx,              KC_RPRN,           KC_U
 
 // BOTH RIGHT
 #define MIRYOKU_ALTERNATIVES_FUN \
-KC_F12,            KC_F7,             KC_F8,             KC_F9,             KC_PSCR,                xxxx,              xxxx,              DF(U_BASE),       DF(U_EXTRA),       TD(U_TD_BOOT),            \
+KC_F12,            KC_F7,             KC_F8,             KC_F9,             KC_PSCR,                xxxx,              DF(U_TAP),         DF(U_EXTRA),       DF(U_BASE),         TD(U_TD_BOOT),            \
 KC_F11,            KC_F4,             KC_F5,             KC_F6,             KC_SCRL,                xxxx,              KC_LSFT,           KC_LCTL,           KC_LALT,           KC_LGUI,           \
 KC_F10,            KC_F1,             KC_F2,             KC_F3,             KC_PAUS,                xxxx,              xxxx,              xxxx,              KC_ALGR,           TD(U_TD_U_FUN),              \
 U_NP,              U_NP,              xxxx,              KC_TAB,            KC_SPC,                 xxxx,              xxxx,              xxxx,              U_NP,              U_NP
 
+
+
+#define MIRYOKU_ALTERNATIVES_TAP_QWERTY \
+KC_TAB,            KC_Q,              KC_W,              KC_E,              KC_R,                   KC_T,               KC_Y,              KC_U,              KC_I,              KC_O,                         \
+KC_LSFT,           KC_A,              KC_S,              KC_D,              KC_F,                   KC_G,               KC_H,              KC_J,              KC_K,              KC_L,                       \
+KC_LCTL,           KC_Z,              KC_X,              KC_C,              KC_V,                   KC_B,               KC_N,              KC_M,              A(KC_TAB),         DF(U_BASE),           \
+U_NP,              U_NP,              KC_ESC,            LT(U_NUM,KC_LALT), KC_SPC,                 KC_BSPC,            KC_ENT,           KC_DEL,            U_NP,              U_NP
 
 
 
@@ -90,13 +97,6 @@ KC_Q,              KC_W,              KC_F,              KC_P,              KC_G
 LGUI_T(KC_A),      LALT_T(KC_R),      LCTL_T(KC_S),      LSFT_T(KC_T),      KC_D,              KC_H,              LSFT_T(KC_N),      LCTL_T(KC_E),      LALT_T(KC_I),      LGUI_T(KC_O),      \
 LT(U_BUTTON,KC_Z), ALGR_T(KC_X),      KC_C,              KC_V,              KC_B,              KC_K,              KC_M,              KC_COMM,           ALGR_T(KC_DOT),    LT(U_BUTTON,KC_SLSH),\
 U_NP,              U_NP,              LT(U_MEDIA,KC_ESC),LT(U_NAV,KC_TAB), LT(U_MOUSE,KC_SPC), LT(U_SYM,KC_BSPC),  LT(U_NUM,KC_ENT), LT(U_FUN,KC_DEL),  U_NP,              U_NP
-
-
-#define MIRYOKU_ALTERNATIVES_TAP_QWERTY \
-KC_Q,              KC_W,              KC_E,              KC_R,              KC_T,                   KC_Y,              KC_U,              KC_I,              KC_O,              KC_P,              \
-KC_A,              KC_S,              KC_D,              KC_F,              KC_G,                   KC_H,              KC_J,              KC_K,              KC_L,              KC_QUOT,           \
-KC_Z,              KC_X,              KC_C,              KC_V,              KC_B,                   KC_N,              KC_M,              KC_COMM,           KC_DOT,            KC_SLSH,           \
-U_NP,              U_NP,              KC_ESC,            KC_SPC,            KC_TAB,                 KC_ENT,            KC_BSPC,           KC_DEL,            U_NP,              U_NP
 
 
 
