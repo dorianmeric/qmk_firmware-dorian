@@ -35,9 +35,9 @@ U_NP,              U_NP,              LT(U_MEDIA,KC_ESC),LT(U_MOUSE,KC_TAB), LT(
 // Redo = Ctrl+Y
 // Undo = Ctrl+Z    
 #define MIRYOKU_ALTERNATIVES_NAV \
-KC_HOME,           LCTL(KC_W),        LCTL(KC_T),        KC_WWW_REFRESH,    KC_PGUP,                    KC_WWW_BACK,       KC_WWW_FORWARD,    xxxx,              xxxx,              xxxx,             \
+KC_HOME,           LCTL(KC_0),        KC_F5,             KC_END,            KC_PGUP,                    KC_WWW_BACK,       KC_WWW_FORWARD,    xxxx,              xxxx,              xxxx,             \
 KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           KC_PGDN,                    xxxx,              KC_LEFT,           KC_DOWN,           KC_UP,             KC_RGHT,           \
-KC_END,            KC_ALGR,           TD(U_TD_U_NAV),    xxxx,              xxxx,                       xxxx,              KC_HOME,           KC_PGDN,           KC_PGUP,           KC_END,            \
+KC_END,            KC_ALGR,           KC_F2,             KC_LEFT,           KC_RGHT,                    xxxx,              KC_HOME,           KC_PGDN,           KC_PGUP,           KC_END,            \
 U_NP,              U_NP,              xxxx,              xxxx,              xxxx,                       KC_BSPC,           KC_ENT,           KC_DEL,            U_NP,              U_NP
 
 #define MIRYOKU_ALTERNATIVES_MOUSE \
