@@ -268,9 +268,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 // controls the COMBO timing, to have a more relax timing for the thumb keys
 uint16_t get_combo_term(uint16_t index, combo_t *combo) {
 
-    if (index  <= 5) { // - &thum_base_right
-        return 300;
-    }
+    // if (index  <= 5) { // - &thum_base_right
+    //     return 300;
+    // }
 
     return 50; //COMBO_TERM; 
 }
@@ -278,11 +278,19 @@ uint16_t get_combo_term(uint16_t index, combo_t *combo) {
 // https://docs.qmk.fm/#/tap_hold?id=tap-hold-configuration-optionszt
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        // case SFT_T(KC_SPC):
-        //     return TAPPING_TERM + 1250;
-        // case LT(1, KC_GRV):
-        //     return 130;
+        case LGUI_T(KC_A): // windows key
+        case LGUI_T(KC_O): // windows key
+            return 400;
+
+        case LALT_T(KC_R):
+        case LCTL_T(KC_S):
+        case LSFT_T(KC_T):
+        case LSFT_T(KC_N):
+        case LCTL_T(KC_E):
+        case LALT_T(KC_I):
+            return 200;
+
         default:
-            return 300; // TAPPING_TERM;
+            return 200; // TAPPING_TERM;
     }
 }
