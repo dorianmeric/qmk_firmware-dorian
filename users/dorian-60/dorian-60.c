@@ -11,8 +11,6 @@
 
 
 // MY CUSTOM CODE //////////////////////////////////////////////////////////////////////////////////////////
-#define COMBO_VARIABLE_LEN
-#define PERMISSIVE_HOLD // applies the "hold" mechanic if another key is pressed and released before the hold key is released, even if this all takes place within the tapping term
 
 
 enum custom_keycodes {

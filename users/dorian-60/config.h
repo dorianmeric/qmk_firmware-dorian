@@ -7,6 +7,11 @@
 
 // #include "custom_config.h"
 
+#define COMBO_VARIABLE_LEN
+#define PERMISSIVE_HOLD // applies the "hold" mechanic if another key is pressed and released before the hold key is released, even if this all takes place within the tapping term
+
+
+
 // default but used in macros
 #undef TAPPING_TERM
 #define TAPPING_TERM 300 // 200ms originally

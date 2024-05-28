@@ -26,6 +26,7 @@ COMB( thum_num,        KC_DOT,                       KC_0,                   KC_
 COMB(combo18,     LCTL(KC_X),               KC_Z,           ALGR_T(KC_X)    )       // z+x = Ctrl+x
 COMB(combo16,     LCTL(KC_C),               ALGR_T(KC_X),   KC_C            )       // x+c = Ctrl+c
 COMB(combo17,     LCTL(KC_V),               KC_C,           KC_D            )       // c+v = Ctrl+v
+COMB(combo19,     KC_ENT,                   KC_D,           KC_V            )       // c+v = Ctrl+v
 
 COMB(combo98,     QK_BOOTLOADER,            KC_Q,  KC_W, KC_F,  KC_P,  KC_B)       // whole top row = puts the mcu in bootloader mode
 
