@@ -8,7 +8,7 @@
 // #include "custom_config.h"
 
 #define COMBO_VARIABLE_LEN
-#define PERMISSIVE_HOLD // applies the "hold" mechanic if another key is pressed and released before the hold key is released, even if this all takes place within the tapping term
+#define PERMISSIVE_HOLD // applies the "hold" mechanic if another key is pressed and released before the hold key is released, even if this all takes place within the tapping term. https://github.com/qmk/qmk_firmware/blob/master/docs/tap_hold.md#permissive-hold
 
 
 

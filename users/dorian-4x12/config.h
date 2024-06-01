@@ -5,18 +5,16 @@
 
 #pragma once
 
-// #include "custom_config.h"
-#define COMBO_VARIABLE_LEN
-#define PERMISSIVE_HOLD // applies the "hold" mechanic if another key is pressed and released before the hold key is released, even if this all takes place within the tapping term
+
+#define PERMISSIVE_HOLD // applies the "hold" mechanic if another key is pressed and released before the hold key is released, even if this all takes place within the tapping term. https://github.com/qmk/qmk_firmware/blob/master/docs/tap_hold.md#permissive-hold
+
 
 
 // default but used in macros
 #undef TAPPING_TERM
-#define TAPPING_TERM 300 // 200ms originally
+#define TAPPING_TERM 200 // 200ms originally
 #define TAPPING_TERM_PER_KEY
 
-// // Prevent normal rollover on alphas from accidentally triggering mods.
-// #define IGNORE_MOD_TAP_INTERRUPT
 
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define QUICK_TAP_TERM 0  // allows to spam the tap output by doing a quick 'tap-hold'
@@ -38,17 +36,12 @@
 #undef MOUSEKEY_TIME_TO_MAX
 #define MOUSEKEY_TIME_TO_MAX    64
 
-// Thumb Combos
-// #if defined (MIRYOKU_KLUDGE_THUMBCOMBOS)
-//   // #define COMBO_COUNT 8
-//   #define COMBO_TERM 300 // 200 originally
-// #endif
-
 #define COMBO_ONLY_FROM_LAYER 0 // makes the Combos letters assume that you are always on layer 0 (useful to trigger keys even if using a Colemak layout for example. But it means the text Combo also triggers while in the NAV / MOUSE layers)
 #define COMBO_TERM 50        // how quickly all combo keys must be pressed in succession to trigger
 // #define COMBO_MUST_HOLD_MODS // if a combo triggers a modifier, only trigger when the combo is held
 // #define COMBO_HOLD_TERM 200  // how long at least one of the combo keys must be held to trigger
-#define EXTRA_SHORT_COMBOS // limits combos to 6 keys max
+#define EXTRA_SHORT_COMBOS // limits combos to 6 keys max 
+#define COMBO_VARIABLE_LEN 
 
 #define COMBO_TERM_PER_COMBO
 
@@ -57,6 +50,7 @@
 #define DYNAMIC_MACRO_NO_NESTING  // disables recursive macros
 
 #define TAP_CODE_DELAY 10 // default 0 
+
 
 
 
@@ -83,7 +77,7 @@
   * selects the hold action of a dual-role key as soon as the tap of the dual-role key is interrupted by the press of another key.
   * See "[hold on other key press](tap_hold.md#hold-on-other-key-press)" for details
 * `#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY`
-  * enables handling for per key `HOLD_ON_OTHER_KEY_PRESS` settings
+  * enables handling for per key `HOLD_ON_OTHER_KEY_PRESS` settingsNNN
 * `#define LEADER_TIMEOUT 300`
   * how long before the leader key times out
     * If you're having issues finishing the sequence before it times out, you may need to increase the timeout setting. Or you may want to enable the `LEADER_PER_KEY_TIMING` option, which resets the timeout after each key is tapped.

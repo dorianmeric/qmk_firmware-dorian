@@ -265,11 +265,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 // controls the COMBO timing, to have a more relax timing for the thumb keys
 uint16_t get_combo_term(uint16_t index, combo_t *combo) {
 
-    // if (index  <= 5) { // - &thum_base_right
-    //     return 300;
-    // }
+    switch (combo->keycode) {
+        case thum_base_left:
+        case thum_base_left2:
+        case thum_base_right:
+        case thum_nav:
+        case thum_mouse:
+        case thum_media:
+        case thum_num:
+            return 200;
 
-    return 50; //COMBO_TERM; 
+        default:
+            return 50; // COMBO_TERM;
+    }
+
 }
 
 // https://docs.qmk.fm/#/tap_hold?id=tap-hold-configuration-optionszt
@@ -290,4 +299,20 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         default:
             return 200; // TAPPING_TERM;
     }
+}
+
+
+
+
+bool get_combo_must_press_in_order(uint16_t index, combo_t *combo) {
+
+    switch (index) {
+        case combo_io: 
+        case combo_oi: 
+            return true;
+
+        default:
+            return false; // TAPPING_TERM;
+    }
+
 }

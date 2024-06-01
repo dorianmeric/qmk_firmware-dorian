@@ -18,7 +18,7 @@
 #define CAPS_KEY MT(MOD_RCTL | MOD_RALT | MOD_RSFT, KC_NO)
 
 #define MIRYOKU_ALTERNATIVES_BASE_COLEMAKDHFATZ \
-KC_ESC,              KC_1,              KC_2,              KC_3,              KC_4,              KC_5,                      KC_6,              KC_7,              KC_8,              KC_9,              KC_0,                   KC_MINS,           KC_EQL,            KC_BSPC,   \
+KC_ESC,              KC_1,              KC_2,              KC_3,        w      KC_4,              KC_5,                      KC_6,              KC_7,              KC_8,              KC_9,              KC_0,                   KC_MINS,           KC_EQL,            KC_BSPC,   \
 KC_TAB,              KC_Q,              KC_W,              KC_F,              KC_P,              KC_B,                      J_KEY,              KC_L,              KC_U,              KC_Y,              KC_SLSH,                KC_LBRC,           KC_RBRC,           KC_BSLS,    \
 CAPS_KEY,          LWIN_T(KC_A),      LALT_T(KC_R),      LCTL_T(KC_S),      LSFT_T(KC_T),       KC_G,                       KC_M,               LSFT_T(KC_N),      LCTL_T(KC_E),      LALT_T(KC_I),       LWIN_T(KC_O),            KC_SCLN,           KC_ENT,          \
 MT(MOD_LSFT,KC_Z),  KC_X,               KC_C,              KC_D,              KC_V,             KC_MINS,                    KC_K,              KC_H,               KC_COMM,             ALGR_T(KC_DOT),       KC_QUOT,                 MT(MOD_RSFT,KC_UP),   \

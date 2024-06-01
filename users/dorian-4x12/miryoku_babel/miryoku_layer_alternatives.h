@@ -63,7 +63,7 @@ xxxx,              xxxx,              xxxx,              xxxx,              xxxx
 KC_LPRN,           KC_7,              KC_8,              KC_9,              KC_RPRN,                xxxx,   xxxx,         KC_CIRC,           KC_KP_PLUS,        KC_KP_MINUS,       KC_KP_ASTERISK,    KC_KP_SLASH,              \
 KC_COMM,           KC_4,              KC_5,              KC_6,              KC_EQL,                 xxxx,   xxxx,         KC_E,              KC_LSFT,           KC_LCTL,           KC_LALT,           KC_LGUI,           \
 KC_DOT,            KC_1,              KC_2,              KC_3,              KC_BSLS,                xxxx,   xxxx,         KC_F4,             KC_DOT,            xxxx,              KC_ALGR,           TD(U_TD_U_NUM),              \
-xxxx,              xxxx,              KC_DOT,            KC_0,              KC_MINS,                xxxx,   xxxx,         KC_BSPC,           xxxx,              xxxx,               xxxx,               xxxx        
+xxxx,              xxxx,              KC_0,              KC_0,              KC_MINS,                xxxx,   xxxx,         KC_BSPC,           xxxx,              xxxx,              xxxx,               xxxx        
 
 // layers for symbols. LEFTMOST RIGHT THUMB
 // remove:  equal/+,  parentheses(?)
@@ -84,10 +84,10 @@ xxxx,               xxxx,              xxxx,             KC_TAB,             KC_
 
 
 #define MIRYOKU_ALTERNATIVES_TAP_QWERTY \
-KC_TAB,            KC_Q,              KC_W,              KC_E,              KC_R,                   xxxx,   xxxx,         KC_T,               KC_Y,              KC_U,              KC_I,              KC_O,                         \
-KC_LSFT,           KC_A,              KC_S,              KC_D,              KC_F,                   xxxx,   xxxx,         KC_G,               KC_H,              KC_J,              KC_K,              KC_L,                       \
-KC_LCTL,           KC_Z,              KC_X,              KC_C,              KC_V,                   xxxx,   xxxx,         KC_B,               KC_N,              KC_M,              A(KC_TAB),         DF(U_BASE),           \
-xxxx,              xxxx,              KC_ESC,     LT(U_NUM,KC_LALT), LT(U_NUM,KC_SPC),              xxxx,   xxxx,         KC_BSPC,            KC_ENT,           KC_DEL,             xxxx,               xxxx
+KC_TAB,            KC_Q,              KC_W,              KC_E,              KC_R,                   KC_1,   xxxx,         KC_T,               KC_Y,              KC_U,              KC_I,              KC_O,                         \
+KC_LSFT,           KC_A,              KC_S,              KC_D,              KC_F,                   KC_2,   xxxx,         KC_G,               KC_H,              KC_J,              KC_K,              KC_L,                       \
+KC_LCTL,           KC_Z,              KC_X,              KC_C,              KC_V,                   KC_3,   xxxx,         KC_B,               KC_N,              KC_M,              A(KC_TAB),         DF(U_BASE),           \
+KC_LALT,           CW_TOGG,           KC_ESC,     LT(U_NUM,KC_LALT),        KC_SPC,                 KC_4,   xxxx,         KC_BSPC,            KC_ENT,           KC_DEL,             xxxx,               xxxx
 
 
     

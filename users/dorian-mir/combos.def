@@ -45,8 +45,16 @@ COMB(combo05,     RCTL(KC_DEL),             KC_U,           KC_Y         )      
 COMB(combo07,     KC_MINUS,                 KC_M,           LSFT_T(KC_N)    )           // h+j = -  , can also get _ with a Shift   
 COMB(combo08,     KC_SEMICOLON,             KC_M,           KC_K    )                   // m+k = :
 
+     
+
 // COMB(combo09,     KC_SCLN,                  KC_H,           LALT_T(KC_L)    )            // k+l = ;
 COMB(combo99,     QK_BOOTLOADER,            J_KEY,              KC_L,              KC_U,             KC_Y,              KC_SLSH)       // whole top row = puts the mcu in bootloader mode
 
 
 // COMB(combo20,     KC_DEL,                   KC_LSFT,      KC_BSPC           )     DOESNT WORK      // Shift+Backspacke = Del
+
+
+
+
+SUBS(combo_io,     "io",             LALT_T(KC_I),      LGUI_T(KC_O)        )                  
+SUBS(combo_oi,     "oi",             LGUI_T(KC_O),      LALT_T(KC_I)        )              
