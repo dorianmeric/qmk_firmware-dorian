@@ -7,9 +7,9 @@
 
 // #include "custom_config.h"
 
-#define PERMISSIVE_HOLD // applies the "hold" mechanic if another key is pressed and released before the hold key is released, even if this all takes place within the tapping term. https://github.com/qmk/qmk_firmware/blob/master/docs/tap_hold.md#permissive-hold
-
-
+// #define PERMISSIVE_HOLD // applies the "hold" mechanic if another key is pressed and released before the hold key is released, even if this all takes place within the tapping term. https://github.com/qmk/qmk_firmware/blob/master/docs/tap_hold.md#permissive-hold
+// Creates many false positives
+#define PERMISSIVE_HOLD_PER_KEY
 
 // default but used in macros
 #undef TAPPING_TERM
@@ -45,7 +45,7 @@
 //   #define COMBO_TERM 300 // 200 originally
 // #endif
 
-#define COMBO_ONLY_FROM_LAYER 0 // makes the Combos letters assume that you are always on layer 0 (useful to trigger keys even if using a Colemak layout for example. But it means the text Combo also triggers while in the NAV / MOUSE layers)
+// #define COMBO_ONLY_FROM_LAYER 0 // makes the Combos letters assume that you are always on layer 0 (useful to trigger keys even if using a Colemak layout for example. But it means the text Combo also triggers while in the NAV / MOUSE layers)
 #define COMBO_TERM 50        // how quickly all combo keys must be pressed in succession to trigger
 // #define COMBO_MUST_HOLD_MODS // if a combo triggers a modifier, only trigger when the combo is held
 // #define COMBO_HOLD_TERM 200  // how long at least one of the combo keys must be held to trigger

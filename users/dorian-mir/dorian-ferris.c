@@ -281,6 +281,7 @@ uint16_t get_combo_term(uint16_t index, combo_t *combo) {
 
 }
 
+// Hold or Tap?
 // https://docs.qmk.fm/#/tap_hold?id=tap-hold-configuration-optionszt
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
@@ -288,6 +289,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case LGUI_T(KC_O): // windows key
             return 400;
 
+        // the home row keys
         case LALT_T(KC_R):
         case LCTL_T(KC_S):
         case LSFT_T(KC_T):
@@ -315,4 +317,21 @@ bool get_combo_must_press_in_order(uint16_t index, combo_t *combo) {
             return false; // TAPPING_TERM;
     }
 
+}
+
+
+// https://github.com/qmk/qmk_firmware/blob/master/docs/tap_hold.md
+bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LT(U_MOUSE,KC_TAB):
+        case LT(U_NAV,KC_SPC):
+        case LT(U_NUM,KC_BSPC):
+        case LT(U_SYM,KC_ENT):
+            // Immediately select the hold action when another key is tapped.
+            return true;
+
+        default:
+            // Do not select the hold action when another key is tapped.
+            return false;
+    }
 }

@@ -1,7 +1,6 @@
 
 
 // thumb combos
-// #if defined (MIRYOKU_KLUDGE_THUMBCOMBOS)
 
 COMB( thum_base_left,  LT(U_MEDIA, KC_ESC),          LT(U_MOUSE,KC_TAB),    LT(U_NAV,KC_SPC)    ) 
 COMB( thum_base_left2,  KC_ESC,                      LT(U_NUM,KC_LALT),     KC_SPC              ) 
@@ -9,52 +8,49 @@ COMB( thum_base_right, LT(U_FUN, KC_DEL),            LT(U_NUM,KC_BSPC),     LT(U
 COMB( thum_nav,        KC_DEL,                       KC_ENT,                 KC_BSPC             )       // NAV layer                
 COMB( thum_mouse,      KC_BTN3,                      KC_BTN2,                KC_BTN1             )       // Mouse layer       
 COMB( thum_media,      KC_MUTE,                      KC_MSTP,                KC_MPLY             )              
-COMB( thum_num,        KC_DOT,                       KC_0,                   KC_MINS             )              
-// COMB( thum_sym,        KC_LPRN,                       KC_RPRN,                KC_UNDS             )              
-// COMB( thum_fun,        KC_APP,                        KC_TAB,                 KC_SPC              )               
-
-// #endif
-
+COMB( thum_num,        KC_DOT,                       KC_0,                   KC_MINS             )                        
 
 
 // Left Hand
-
-// COMB(combo10,     KC_TAB,                   KC_W,           KC_E            )       // w+e = Tab
-// COMB(combo14,     LSFT(KC_F9),              KC_Z,              KC_G         )       // r+t = Shift+F9
-// COMB(combo13,     KC_ESC,                   KC_W,              KC_E         )       // w+e = Esc
-// COMB(combo11,     LCTL(KC_S),               KC_Z,           LSFT_T(KC_F)         )       // e+r =  Ctrl+S
 COMB(combo18,     LCTL(KC_X),               KC_Z,           ALGR_T(KC_X)    )       // z+x = Ctrl+x
 COMB(combo16,     LCTL(KC_C),               ALGR_T(KC_X),   KC_C            )       // x+c = Ctrl+c
 COMB(combo17,     LCTL(KC_V),               KC_C,           KC_D            )       // c+v = Ctrl+v
-COMB(combo19,     KC_ENT,                   KC_D,           KC_V            )       // c+v = Ctrl+v
+COMB(combo19,     KC_ENT,                   KC_D,           KC_V            )       // d+v = Ent
+COMB(combo20,     KC_BACKSPACE,             KC_T,           KC_G            )       // t+g = Backspace
 
 COMB(combo98,     QK_BOOTLOADER,            KC_Q,  KC_W, KC_F,  KC_P,  KC_B)       // whole top row = puts the mcu in bootloader mode
 
 
+
+
 // Right Hand
-
-// COMB(combo00,     KC_BSPC,                  KC_I,           KC_O            )        // i+o = Backspace uy  yu
 COMB(combo01,     RCTL(KC_BSPC),            J_KEY,          KC_L            )           // u++i = Backspace Word
-// COMB(combo02,     RSFT(KC_HOME),            Y_KEY,          KC_U            )            // y+u = Select line left
-// COMB(combo03,     KC_ENT,                   KC_K,           KC_L            )       // k+l = Enter
-
-// COMB(combo04,     KC_DEL,                   KC_COMM,        ALGR_T(KC_DOT)  )           // ,+. = Del   ,.
 COMB(combo05,     RCTL(KC_DEL),             KC_U,           KC_Y         )           // m+, = delete next word     h,
-// COMB(combo06,     RSFT(KC_END),             KC_N,           KC_M            )            // n+m = Select line right   kh
-
 COMB(combo07,     KC_MINUS,                 KC_M,           LSFT_T(KC_N)    )           // h+j = -  , can also get _ with a Shift   
 COMB(combo08,     KC_SEMICOLON,             KC_M,           KC_K    )                   // m+k = :
 
-     
-
-// COMB(combo09,     KC_SCLN,                  KC_H,           LALT_T(KC_L)    )            // k+l = ;
 COMB(combo99,     QK_BOOTLOADER,            J_KEY,              KC_L,              KC_U,             KC_Y,              KC_SLSH)       // whole top row = puts the mcu in bootloader mode
 
 
-// COMB(combo20,     KC_DEL,                   KC_LSFT,      KC_BSPC           )     DOESNT WORK      // Shift+Backspacke = Del
+
+
+///// GAME LAYER
+COMB( game_00,      KC_ESC,                 KC_LALT,           KC_SPC ) 
+COMB( game_01,      KC_1,                   KC_Q,              KC_W ) 
+COMB( game_02,      KC_2,                   KC_W,              KC_E ) 
+COMB( game_03,      KC_3,                   KC_E,              KC_R ) 
+COMB( game_04,      KC_4,                   KC_D,              KC_F ) 
+COMB( game_05,      KC_5,                   KC_C,              KC_V ) 
+COMB( game_p,       KC_P,                   KC_I,              KC_O ) 
+COMB( game_n,       KC_N,                   KC_K,              KC_L ) // moved one row up
+COMB( game_bootloader, QK_BOOTLOADER,            KC_TAB,            KC_Q,              KC_W,              KC_E,              KC_R)       // whole top row = puts the mcu in bootloader mode
 
 
 
-
+///// TEXT SHORTCUT
 SUBS(combo_io,     "io",             LALT_T(KC_I),      LGUI_T(KC_O)        )                  
-SUBS(combo_oi,     "oi",             LGUI_T(KC_O),      LALT_T(KC_I)        )              
+SUBS(combo_oi,     "oi",             LGUI_T(KC_O),      LALT_T(KC_I)        )               
+SUBS(combo_ion,    "ion",            LSFT_T(KC_N),      LGUI_T(KC_O),   LALT_T(KC_I)        )              
+SUBS(combo_tion,   "tion",           LSFT_T(KC_T),      LSFT_T(KC_N),   LGUI_T(KC_O),      LALT_T(KC_I)        )        
+
+SUBS(combo_regards,     "Regards,\nDorian",             KC_P,              KC_B        )     
